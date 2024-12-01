@@ -1,0 +1,147 @@
+{
+  "There is no error description for the error that has occurred.": "There is no error description for the error that has occurred.",
+  "The following error has occurred:{0}/{0} ist eine Fehlermeldung": {
+    "message": "The following error has occurred:{0}",
+    "comment": [
+      "{0} ist eine Fehlermeldung"
+    ]
+  },
+  "The micro:bit was not found. Check whether it is correctly connected to your laptop with a USB cable.": "The micro:bit was not found. Check whether it is correctly connected to your laptop with a USB cable.",
+  "You have more than one micro:bit connected to your laptop. Remove one.": "You have more than one micro:bit connected to your laptop. Remove one.",
+  "No connection can be established with the Micro:bit. Check that it is correctly connected to your laptop with a USB cable.": "No connection can be established with the Micro:bit. Check that it is correctly connected to your laptop with a USB cable.",
+  "There is a problem uploading a Python file to the Micro:bit. Try the following (one after the other):\nCheck whether the Micro:bit is correctly connected to the laptop.\nPress the reset button on the Micro:bit.\nPull out the USB plug and connect again.\nFlash MicroPython to the Micro:bit.": "There is a problem uploading a Python file to the Micro:bit. Try the following (one after the other):\nCheck whether the Micro:bit is correctly connected to the laptop.\nPress the reset button on the Micro:bit.\nPull out the USB plug and connect again.\nFlash MicroPython to the Micro:bit.",
+  "Operating system is not supported.": "Operating system is not supported.",
+  "Port konnte nicht geschlossen werden.": "Port konnte nicht geschlossen werden.",
+  "File was too large for the available memory.": "File was too large for the available memory.",
+  "A module file with the same name already exists.": "A module file with the same name already exists.",
+  "The name is already reserved for an internal module.": "The name is already reserved for an internal module.",
+  "The Micro:bit does not react as desired. Try the following (one after the other):\nPress the reset button on Micro:bit.\nPull out the USB plug and connect again.\nFlash MicroPython to the Micro:bit.": "The Micro:bit does not react as desired. Try the following (one after the other):\nPress the reset button on Micro:bit.\nPull out the USB plug and connect again.\nFlash MicroPython to the Micro:bit.",
+  "An error occurred while flashing the Micro:bit.": "An error occurred while flashing the Micro:bit.",
+  "An error occurred when ejecting the Micro:bit.": "An error occurred when ejecting the Micro:bit.",
+  "There is no error text for the error type {0}./{0} ist ein Fehlertyp.": {
+    "message": "There is no error text for the error type {0}.",
+    "comment": [
+      "{0} ist ein Fehlertyp."
+    ]
+  },
+  "Select a Micro:bit drive.": "Select a Micro:bit drive.",
+  "Flash MicroPython to {0}. Please wait.../{0}: Path to Micro:bit": {
+    "message": "Flash MicroPython to {0}. Please wait...",
+    "comment": [
+      "{0}: Path to Micro:bit"
+    ]
+  },
+  "{0} has been flashed./{0}: Path to Micro:bit": {
+    "message": "{0} has been flashed.",
+    "comment": [
+      "{0}: Path to Micro:bit"
+    ]
+  },
+  "The following error occurred when flashing {0}: {1}/{0}: Path to Micro:bit{1}: Fehlermeldung": {
+    "message": "The following error occurred when flashing {0}: {1}",
+    "comment": [
+      "{0}: Path to Micro:bit",
+      "{1}: Fehlermeldung"
+    ]
+  },
+  "Program is running...": "Program is running...",
+  "Program has been terminated.": "Program has been terminated.",
+  "The URL {0} is not in the correct format./{0} ist eine URL zu einem File auf GitHub.": {
+    "message": "The URL {0} is not in the correct format.",
+    "comment": [
+      "{0} ist eine URL zu einem File auf GitHub."
+    ]
+  },
+  "A module named {0} already exists. Do you want to replace it?/{0} ist ein Pythonmodul": {
+    "message": "A module named {0} already exists. Do you want to replace it?",
+    "comment": [
+      "{0} ist ein Pythonmodul"
+    ]
+  },
+  "Yes": "Yes",
+  "The module {0} could not be installed./{0} ist eine URL zu einem File auf GitHub.": {
+    "message": "The module {0} could not be installed.",
+    "comment": [
+      "{0} ist eine URL zu einem File auf GitHub."
+    ]
+  },
+  "The URL of the file on GitHub": "The URL of the file on GitHub",
+  "https://raw.githubusercontent.com/...": "https://raw.githubusercontent.com/...",
+  "URL is required.": "URL is required.",
+  "File {0} did not exist/{0} ist ein externes Modul im Workspace.": {
+    "message": "File {0} did not exist",
+    "comment": [
+      "{0} ist ein externes Modul im Workspace."
+    ]
+  },
+  "Do you really want to remove the {0} module from the extension?/{0} ist ein ExtLibFile": {
+    "message": "Do you really want to remove the {0} module from the extension?",
+    "comment": [
+      "{0} ist ein ExtLibFile"
+    ]
+  },
+  "Open file": "Open file",
+  "The name {0} is already reserved for an internal module./{0} ist der Name einer externen Bibliothek.": {
+    "message": "The name {0} is already reserved for an internal module.",
+    "comment": [
+      "{0} ist der Name einer externen Bibliothek."
+    ]
+  },
+  "Stops a process on the Micro:bit.": "Stops a process on the Micro:bit.",
+  "Restarts the program.": "Restarts the program.",
+  "Flash MicroPython to Micro:bit.": "Flash MicroPython to Micro:bit.",
+  "Delete": "Delete",
+  "Deletes all files on Micro:bit.": "Deletes all files on Micro:bit.",
+  "Eject": "Eject",
+  "Eject Micro:bit": "Eject Micro:bit",
+  "Close port": "Close port",
+  "Closes the port": "Closes the port",
+  "Send command to Micro:bit": "Send command to Micro:bit",
+  "Sets the micro:bit to raw mode.": "Sets the micro:bit to raw mode.",
+  "Returns the micro:bit to standard mode.": "Returns the micro:bit to standard mode.",
+  "Triggers a soft reset. Is used to restart a programme.": "Triggers a soft reset. Is used to restart a programme.",
+  "The opened folder is not empty. Do you really want to change the contents of the folder? Files may be lost in the process.": "The opened folder is not empty. Do you really want to change the contents of the folder? Files may be lost in the process.",
+  "Port has been closed.": "Port has been closed.",
+  "Uploading {0}.../{0}: file name": {
+    "message": "Uploading {0}...",
+    "comment": [
+      "{0}: file name"
+    ]
+  },
+  "All files on the Micro:bit have been deleted.": "All files on the Micro:bit have been deleted.",
+  "Try to eject Micro:bit drive...": "Try to eject Micro:bit drive...",
+  "Micro:bit drive has been ejected.": "Micro:bit drive has been ejected.",
+  "No drive was selected.": "No drive was selected.",
+  "{0} was successfully uploaded./{0}: file name": {
+    "message": "{0} was successfully uploaded.",
+    "comment": [
+      "{0}: file name"
+    ]
+  },
+  "Enter the name of the new file.": "Enter the name of the new file.",
+  "Filename": "Filename",
+  "Filename is required.": "Filename is required.",
+  "The file name may only contain numbers, the letters a-z and A-Z and the characters ‘-’ and ‘_’.": "The file name may only contain numbers, the letters a-z and A-Z and the characters ‘-’ and ‘_’.",
+  "The file {0} already exists./{0} ist der Name der Datei": {
+    "message": "The file {0} already exists.",
+    "comment": [
+      "{0} ist der Name der Datei"
+    ]
+  },
+  "Should the file {0} actually be deleted?/{0} ist eine Datei.": {
+    "message": "Should the file {0} actually be deleted?",
+    "comment": [
+      "{0} ist eine Datei."
+    ]
+  },
+  "Enter the new name of the file.": "Enter the new name of the file.",
+  "The file name is required.": "The file name is required.",
+  "The file {0} already exists./{0} ist der Dateiname": {
+    "message": "The file {0} already exists.",
+    "comment": [
+      "{0} ist der Dateiname"
+    ]
+  },
+  "No workspace is open.": "No workspace is open.",
+  "The URL does not have the correct format.": "The URL does not have the correct format."
+}

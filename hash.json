@@ -1,0 +1,222 @@
+[
+    {
+        "name": "__init__.py",
+        "dirs": [
+            "microbit"
+        ],
+        "extDirs": [
+            "Microbit-Basic-Stubs-main",
+            "microbit"
+        ],
+        "hash": "12f45bbb9bd3195d402a28e3cd3f93809d7979937fc94169d79bcd8045f7c865"
+    },
+    {
+        "name": "accelerometer.py",
+        "dirs": [
+            "microbit"
+        ],
+        "extDirs": [
+            "Microbit-Basic-Stubs-main",
+            "microbit"
+        ],
+        "hash": "a283dd851c302577ec3678ab326cff10aa3fac043b939b4fbc81f516d767e8dc"
+    },
+    {
+        "name": "compass.py",
+        "dirs": [
+            "microbit"
+        ],
+        "extDirs": [
+            "Microbit-Basic-Stubs-main",
+            "microbit"
+        ],
+        "hash": "7b3f06e3f7b3470eb4538aa18910a1a86ffe8e021ce30a2f8f96ef620a948ec6"
+    },
+    {
+        "name": "display.py",
+        "dirs": [
+            "microbit"
+        ],
+        "extDirs": [
+            "Microbit-Basic-Stubs-main",
+            "microbit"
+        ],
+        "hash": "e915811ed9ec52228504951cf895231041afeacbf3dc018c9b6b995a332946c6"
+    },
+    {
+        "name": "i2c.py",
+        "dirs": [
+            "microbit"
+        ],
+        "extDirs": [
+            "Microbit-Basic-Stubs-main",
+            "microbit"
+        ],
+        "hash": "738147f8a5d2d24204d604484995573ec696bde8cd12b4ba9bad873c9410b79d"
+    },
+    {
+        "name": "microphone.py",
+        "dirs": [
+            "microbit"
+        ],
+        "extDirs": [
+            "Microbit-Basic-Stubs-main",
+            "microbit"
+        ],
+        "hash": "62ffcc5f5f5bf786c726fe4bb567c6ffa3aec725a836ac92e95d033a496b026f"
+    },
+    {
+        "name": "power.py",
+        "dirs": [
+            "microbit"
+        ],
+        "extDirs": [
+            "Microbit-Basic-Stubs-main",
+            "microbit"
+        ],
+        "hash": "bfe869f8f3f93c6142dc2f290d86ad0f31fd25745829b3bf0a2fe1c29a5ac541"
+    },
+    {
+        "name": "speaker.py",
+        "dirs": [
+            "microbit"
+        ],
+        "extDirs": [
+            "Microbit-Basic-Stubs-main",
+            "microbit"
+        ],
+        "hash": "59ddeba2af1559fcb202a2659ecf3cd9a2cdb2b1f214fcd617eb73c974e37f5e"
+    },
+    {
+        "name": "spi.py",
+        "dirs": [
+            "microbit"
+        ],
+        "extDirs": [
+            "Microbit-Basic-Stubs-main",
+            "microbit"
+        ],
+        "hash": "8ba36a32fc6652f67af90f0ea93db4a7d9f4002a4c0c3c8e292c2743a6d815b0"
+    },
+    {
+        "name": "uart.py",
+        "dirs": [
+            "microbit"
+        ],
+        "extDirs": [
+            "Microbit-Basic-Stubs-main",
+            "microbit"
+        ],
+        "hash": "dfe88b304fc366b9950691513fb1d399c4918c03a91707008c5ff9b1387a215e"
+    },
+    {
+        "name": "__init__.py",
+        "dirs": [
+            "audio"
+        ],
+        "extDirs": [
+            "Microbit-Extended-Stubs-main",
+            "audio"
+        ],
+        "hash": "917a28d9bfbc0a6478651fd354f94501c514618dc107108353e109f5399960ca"
+    },
+    {
+        "name": "__init__.py",
+        "dirs": [
+            "log"
+        ],
+        "extDirs": [
+            "Microbit-Extended-Stubs-main",
+            "log"
+        ],
+        "hash": "40918c7b324d380b850ad5fd451d11a47064ada26b6341a5288a10e9f047fffa"
+    },
+    {
+        "name": "__init__.py",
+        "dirs": [
+            "machine"
+        ],
+        "extDirs": [
+            "Microbit-Extended-Stubs-main",
+            "machine"
+        ],
+        "hash": "c0f69aa1eeaa7d98813c2f5f6fd9e77f26757cb45a76a103bf28f6ce3a2da5c3"
+    },
+    {
+        "name": "__init__.py",
+        "dirs": [
+            "music"
+        ],
+        "extDirs": [
+            "Microbit-Extended-Stubs-main",
+            "music"
+        ],
+        "hash": "c8dd00dfc03230544a3deb46d938dae73de5b1c22a962552b846eb25207c6e15"
+    },
+    {
+        "name": "__init__.py",
+        "dirs": [
+            "neopixel"
+        ],
+        "extDirs": [
+            "Microbit-Extended-Stubs-main",
+            "neopixel"
+        ],
+        "hash": "2d7a4c2742b54216800765ec8bdc3e66104f2783b9d80ac7292f0498fb131169"
+    },
+    {
+        "name": "__init__.py",
+        "dirs": [
+            "os"
+        ],
+        "extDirs": [
+            "Microbit-Extended-Stubs-main",
+            "os"
+        ],
+        "hash": "bb8b7eaf784a60e165d604e834ccb70cb63c3a3a9c4a59e602c846466ef7bb31"
+    },
+    {
+        "name": "__init__.py",
+        "dirs": [
+            "radio"
+        ],
+        "extDirs": [
+            "Microbit-Extended-Stubs-main",
+            "radio"
+        ],
+        "hash": "4cb44253aba5951a8a3e9524d8579a275175d71e3e4082ef65c0e7a1958f9db8"
+    },
+    {
+        "name": "__init__.py",
+        "dirs": [
+            "random"
+        ],
+        "extDirs": [
+            "Microbit-Extended-Stubs-main",
+            "random"
+        ],
+        "hash": "464a25002b403bd37a7d6c151cfc2ba47706f8b3f259b09e41e80e93845d5822"
+    },
+    {
+        "name": "__init__.py",
+        "dirs": [
+            "speech"
+        ],
+        "extDirs": [
+            "Microbit-Extended-Stubs-main",
+            "speech"
+        ],
+        "hash": "017fc075dc96102f49d3072214443409bc8f48b03cc90080f34e03c01bfd46d8"
+    },
+    {
+        "name": "__init__.py",
+        "dirs": [
+            "utime"
+        ],
+        "extDirs": [
+            "Microbit-Extended-Stubs-main",
+            "utime"
+        ],
+        "hash": "389dce6ee47d2beaa400584f79f581ce318728d3e5cc2db315a2cd38f5c87fed"
+    }
+]

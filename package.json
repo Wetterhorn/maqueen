@@ -1,0 +1,288 @@
+{
+  "name": "maqueen",
+  "displayName": "Micro:bit Maqueen MicroPython",
+  "description": "%description%",
+  "publisher": "DavidEichenberger",
+  "license": "MIT",
+  "files": [
+    "README.md",
+    "LICENSE.md",
+    "Libraries/extern/gitHub",
+    "Libraries/extern/local"
+  ],
+  "version": "0.0.16",
+  "icon": "resources/extensionIcon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Wetterhorn/maqueen.git"
+  },
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Education"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "l10n": "./l10n",
+  "contributes": {
+    "configuration": {
+      "properties": {
+        "maqueen.showModView": {
+          "type": "boolean",
+          "default": false,
+          "description": "%properties.showModView%"
+        },
+        "maqueen.advancedControl": {
+          "type": "boolean",
+          "default": false,
+          "description": "%properties.advancedControl%"
+        },
+        "maqueen.logErrors": {
+          "type": "boolean",
+          "default": false,
+          "description": "%properties.logErrors%"
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "maqueen.createProject",
+        "title": "%command.createProject%"
+      },
+      {
+        "command": "%command.openWorkspace%",
+        "title": "%command.openWorkspace%"
+      },
+      {
+        "command": "maqueen.createMainFile",
+        "title": "%command.createMainFile%",
+        "icon": "$(new-file)"
+      },
+      {
+        "command": "maqueen.createModFile",
+        "title": "%command.createModFile%",
+        "icon": "$(new-file)"
+      },
+      {
+        "command": "maqueen.deleteFile",
+        "title": "%command.deleteFile%"
+      },
+      {
+        "command": "maqueen.renameFile",
+        "title": "%command.renameFile%"
+      },
+      {
+        "command": "maqueen.uploadFile",
+        "title": "%command.uploadFile%",
+        "icon": "$(send)"
+      },
+      {
+        "command": "maqueen.enableLib",
+        "title": "%command.enableLib%"
+      },
+      {
+        "command": "maqueen.disableLib",
+        "title": "%command.disableLib%"
+      },
+      {
+        "command": "maqueen.deleteExtLib",
+        "title": "%command.deleteExtLib%"
+      },
+      {
+        "command": "maqueen.removeExtLib",
+        "title": "%command.removeExtLib%"
+      },
+      {
+        "command": "maqueen.copyExtLibFileToWorkspace",
+        "title": "%command.copyExtLibFileToWorkspace%"
+      },
+      {
+        "command": "maqueen.addExtLibFile",
+        "title": "%command.addExtLibFile%",
+        "icon": "$(new-file)"
+      },
+      {
+        "command": "maqueen.loadExtLibFile",
+        "title": "%command.loadExtLibFile%",
+        "icon": "$(cloud-download)"
+      },
+      {
+        "command": "maqueen.refreshExtLibFileToWorkspace",
+        "title": "%command.refreshExtLibFileToWorkspace%",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "maqueen.ejectDevice",
+        "title": "%command.ejectDevice%"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "maqueen",
+          "title": "Maqueen",
+          "icon": "resources/activityBarIcon.png"
+        }
+      ]
+    },
+    "menus": {
+      "view/item/context": [
+        {
+          "command": "maqueen.deleteFile",
+          "group": "navigation",
+          "when": "view == mainFileExplorer || view == modFileExplorer"
+        },
+        {
+          "command": "maqueen.renameFile",
+          "group": "navigation",
+          "when": "view == mainFileExplorer || view == modFileExplorer"
+        },
+        {
+          "command": "maqueen.uploadFile",
+          "group": "inline",
+          "when": "maqueen.fileUploadRunning==false&&(maqueen.workspaceIsOk=='true'||workspaceFolderCount == 0)&&(view == mainFileExplorer || view == modFileExplorer || view == extLibFileExplorer)"
+        },
+        {
+          "command": "maqueen.enableLib",
+          "group": "navigation",
+          "when": "view==extLibFileExplorer&&(viewItem==disabledUsed||viewItem==disabledOldUsed||viewItem==disabledNotUsed)"
+        },
+        {
+          "command": "maqueen.disableLib",
+          "group": "navigation",
+          "when": "view==extLibFileExplorer&&(viewItem==enabledUsed||viewItem==enabledOldUsed||viewItem==enabledNotUsed)"
+        }
+        ,
+        {
+          "command": "maqueen.deleteExtLib",
+          "group": "navigation",
+          "when": "view==extLibFileExplorer&&(viewItem==enabledUsed||viewItem==enabledOldUsed||viewItem==enabledNotUsed||viewItem==disabledUsed||viewItem==disabledOlderUsed||viewItem==disabledNotUsed)"
+        }
+        ,
+        {
+          "command": "maqueen.removeExtLib",
+          "group": "navigation",
+          "when": "view==extLibFileExplorer&&(viewItem==enabledUsed||viewItem==enabledOldUsed||viewItem==enabledStillUsed||viewItem==disabledUsed||viewItem==disabledOlderUsed||viewItem==disabledStillUsed)"
+        },
+        {
+          "command": "maqueen.copyExtLibFileToWorkspace",
+          "group": "navigation",
+          "when": "view==extLibFileExplorer&&(viewItem==enabledNotUsed||viewItem==disabledNotUsed)&&maqueen.workspaceIsOk=='true'"
+        },
+        {
+          "command": "maqueen.refreshExtLibFileToWorkspace",
+          "group": "inline",
+          "when": "view==extLibFileExplorer&&(viewItem==enabledOldUsed||viewItem==disabledOldUsed)"
+        }
+      ],
+      "view/title": [
+        {
+          "command": "maqueen.createMainFile",
+          "group": "navigation",
+          "when": "view == mainFileExplorer"
+        },
+        {
+          "command": "maqueen.createModFile",
+          "group": "navigation",
+          "when": "view == modFileExplorer",
+          "icon": "$(new-file)"
+        },
+        {
+          "command": "maqueen.addExtLibFile",
+          "group": "navigation",
+          "when": "view == extLibFileExplorer"
+        },
+        {
+          "command": "maqueen.loadExtLibFile",
+          "group": "navigation",
+          "when": "view == extLibFileExplorer"
+        }
+      ],
+      "editor/title": [
+        {
+          "command": "maqueen.uploadFile",
+          "when": "resourceLangId == python&&maqueen.showSendButton",
+          "group": "navigation"
+        }
+      ]
+    },
+    "views": {
+      "maqueen": [
+        {
+          "id": "control",
+          "name": "%views.control%",
+          "when": "maqueen.extensionActivated==true"
+        },
+        {
+          "id": "mainFileExplorer",
+          "name": "%views.mainFileExplorer%",
+          "when": "maqueen.workspaceIsOk=='true'&&maqueen.extensionActivated==true"
+        },
+        {
+          "id": "modFileExplorer",
+          "name": "%views.modFileExplorer%",
+          "when": "maqueen.showModView==true&&maqueen.workspaceIsOk=='true'&&maqueen.extensionActivated==true"
+        },
+        {
+          "id": "welcome",
+          "name": "%views.welcome%",
+          "when": "maqueen.workspaceIsOk&&maqueen.workspaceIsOk!='true'"
+        },
+        {
+          "id": "extLibFileExplorer",
+          "name": "%views.extLibFileExplorer%",
+          "when": "maqueen.extensionActivated==true&&(maqueen.workspaceIsOk=='true'||workspaceFolderCount == 0)"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "welcome",
+        "contents": "%viewsWelcome.welcome1%",
+        "when": "workspaceFolderCount > 0 && maqueen.workspaceIsOk=='false'"
+      },
+      {
+        "view": "welcome",
+        "contents": "%viewsWelcome.welcome2%",
+        "when": "workspaceFolderCount == 0"
+      },
+      {
+        "view": "welcome",
+        "contents": "%viewsWelcome.welcome3%",
+        "when": "(!maqueen.workspaceIsOk||maqueen.workspaceIsOk=='undefined')&&workspaceFolderCount>0"
+      },
+      {
+        "view": "extLibFileExplorer",
+        "contents": "Loading...",
+        "when": "maqueen.extLibFilesLoaded!='true'"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@types/vscode": "^1.95.0",
+    "@typescript-eslint/eslint-plugin": "^8.16.0",
+    "@typescript-eslint/parser": "^8.16.0",
+    "@vscode/test-electron": "^2.4.1",
+    "eslint": "^9.15.0",
+    "glob": "^11.0.0",
+    "mocha": "^10.8.2",
+    "pyright": "^1.1.389",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "serialport": "^12.0.0"
+  }
+}
