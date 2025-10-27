@@ -37,11 +37,6 @@ jobs:
       - name: Install deps
         run: npm ci
 
-      - name: Read package name/version
-        id: meta
-        run: |
-          node -e "const fs=require('fs');const pkg=require('./package.json');fs.appendFileSync(process.env.GITHUB_OUTPUT,`name=${pkg.name}\nversion=${pkg.version}\npublisher=${pkg.publisher||''}\n`);"
-
       - name: Rebuild native addons for Electron (per target)
         run: npx electron-rebuild --force --version=37.6.0 --arch=${{ matrix.arch }}
 
