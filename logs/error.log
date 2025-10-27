@@ -1,0 +1,1407 @@
+[2025-10-02T16:50:23.039Z] [ExecuteError] executeCommand
+"timeOut"
+
+[2025-10-02T16:50:23.039Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOut
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:449:35
+
+[2025-10-02T16:50:23.040Z] [UserAction] actionFrame
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOut
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:449:35
+
+[2025-10-02T16:50:31.080Z] [ExecuteError] executeCommand
+"timeOutSayHello"
+
+[2025-10-02T16:50:31.081Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOutSayHello
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:449:35
+
+[2025-10-02T16:50:31.081Z] [UserAction] actionFrame
+CustomError: The Micro:bit does not react as desired. Press the reset button on Micro:bit.
+    at MicrobitController.checkMicroPython (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:342:19)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:93:25
+    at actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:40:17)
+    at Kb.h (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:41557)
+
+[2025-10-02T16:51:24.648Z] [ExecuteError] executeCommand
+"timeOut"
+
+[2025-10-02T16:51:24.648Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOut
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:449:35
+
+[2025-10-02T16:51:24.648Z] [UserAction] actionFrame
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOut
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:449:35
+
+[2025-10-02T16:51:30.301Z] [ExecuteError] executeCommand
+"timeOutSayHello"
+
+[2025-10-02T16:51:30.302Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOutSayHello
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:449:35
+
+[2025-10-02T16:51:30.303Z] [UserAction] actionFrame
+CustomError: The Micro:bit does not react as desired. Press the reset button on Micro:bit.
+    at MicrobitController.checkMicroPython (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:342:19)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:93:25
+    at actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:40:17)
+    at Kb.h (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:41557)
+
+[2025-10-02T16:59:55.721Z] [ExecuteError] executeCommand
+"timeOut"
+
+[2025-10-02T16:59:55.723Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOut
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:449:35
+
+[2025-10-02T16:59:55.723Z] [UserAction] actionFrame
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOut
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:449:35
+
+[2025-10-02T17:00:08.842Z] [ExecuteError] executeCommand
+"timeOutSayHello"
+
+[2025-10-02T17:00:08.843Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOutSayHello
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:449:35
+
+[2025-10-02T17:00:08.844Z] [UserAction] actionFrame
+CustomError: The Micro:bit does not react as desired. Press the reset button on Micro:bit.
+    at MicrobitController.checkMicroPython (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:342:19)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:93:25
+    at actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:40:17)
+    at Kb.h (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:41557)
+
+[2025-10-07T14:00:49.127Z] [ExecuteError] executeCommand
+"timeOut"
+
+[2025-10-07T14:00:49.129Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOut
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:448:35
+
+[2025-10-07T14:00:49.129Z] [UserAction] actionFrame
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOut
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:448:35
+
+[2025-10-07T14:00:54.571Z] [ExecuteError] executeCommand
+"timeOutSayHello"
+
+[2025-10-07T14:00:54.571Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOutSayHello
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:448:35
+
+[2025-10-07T14:00:54.572Z] [UserAction] actionFrame
+CustomError: The Micro:bit does not react as desired. Press the reset button on Micro:bit.
+    at MicrobitController.checkMicroPython (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:342:19)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:93:25
+    at actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:40:17)
+    at Kb.h (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:41557)
+
+[2025-10-07T14:04:58.432Z] [ConnectionError] openPort
+Error: Port is opening
+    at SerialPort.open (/Users/davideichenberger/Documents/GitHub/maqueen/node_modules/@serialport/stream/dist/index.js:101:37)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:224:18
+    at new Promise (<anonymous>)
+    at MicrobitController.openPort (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:223:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:287:32
+    at new Promise (<anonymous>)
+    at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:280:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:409:38
+    at new Promise (<anonymous>)
+    at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:407:16)
+    at MicrobitController.checkMicroPython (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:340:34)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:93:36
+    at actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:40:17)
+    at Kb.h (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:41557)
+
+[2025-10-07T14:04:58.434Z] [ConnectionError] try open port
+Error: Port is opening
+    at SerialPort.open (/Users/davideichenberger/Documents/GitHub/maqueen/node_modules/@serialport/stream/dist/index.js:101:37)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:224:18
+    at new Promise (<anonymous>)
+    at MicrobitController.openPort (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:223:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:287:32
+    at new Promise (<anonymous>)
+    at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:280:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:409:38
+    at new Promise (<anonymous>)
+    at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:407:16)
+    at MicrobitController.checkMicroPython (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:340:34)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:93:36
+    at actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:40:17)
+    at Kb.h (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:41557)
+
+[2025-10-07T14:04:58.528Z] [ConnectionError] openPort
+Error: Port is opening
+    at SerialPort.open (/Users/davideichenberger/Documents/GitHub/maqueen/node_modules/@serialport/stream/dist/index.js:101:37)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:224:18
+    at new Promise (<anonymous>)
+    at MicrobitController.openPort (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:223:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:287:32
+    at new Promise (<anonymous>)
+    at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:280:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:419:33
+
+[2025-10-07T14:04:58.528Z] [ConnectionError] try open port
+Error: Port is opening
+    at SerialPort.open (/Users/davideichenberger/Documents/GitHub/maqueen/node_modules/@serialport/stream/dist/index.js:101:37)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:224:18
+    at new Promise (<anonymous>)
+    at MicrobitController.openPort (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:223:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:287:32
+    at new Promise (<anonymous>)
+    at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:280:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:419:33
+
+[2025-10-07T14:04:58.539Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T14:04:58.550Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T14:04:59.542Z] [ExecuteError] executeCommand
+"timeOutSayHello"
+
+[2025-10-07T14:04:59.543Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOutSayHello
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:448:35
+
+[2025-10-07T14:04:59.543Z] [UserAction] actionFrame
+CustomError: The Micro:bit does not react as desired. Press the reset button on Micro:bit.
+    at MicrobitController.checkMicroPython (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:342:19)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:93:25
+    at actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:40:17)
+    at Kb.h (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:41557)
+
+[2025-10-07T14:05:04.906Z] [ConnectionError] openPort
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T14:05:04.906Z] [ConnectionError] try open port
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T14:05:04.908Z] [ConnectionError] openPort
+Error: Port is opening
+    at SerialPort.open (/Users/davideichenberger/Documents/GitHub/maqueen/node_modules/@serialport/stream/dist/index.js:101:37)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:224:18
+    at new Promise (<anonymous>)
+    at MicrobitController.openPort (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:223:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:287:32
+    at new Promise (<anonymous>)
+    at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:280:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:409:38
+    at new Promise (<anonymous>)
+    at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:407:16)
+    at MicrobitController.checkMicroPython (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:340:34)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:93:36
+    at actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:40:17)
+    at Kb.h (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:41557)
+
+[2025-10-07T14:05:04.908Z] [ConnectionError] try open port
+Error: Port is opening
+    at SerialPort.open (/Users/davideichenberger/Documents/GitHub/maqueen/node_modules/@serialport/stream/dist/index.js:101:37)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:224:18
+    at new Promise (<anonymous>)
+    at MicrobitController.openPort (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:223:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:287:32
+    at new Promise (<anonymous>)
+    at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:280:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:409:38
+    at new Promise (<anonymous>)
+    at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:407:16)
+    at MicrobitController.checkMicroPython (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:340:34)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:93:36
+    at actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:40:17)
+    at Kb.h (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:41557)
+
+[2025-10-07T14:05:04.909Z] [ConnectionError] openPort
+Error: Port is opening
+    at SerialPort.open (/Users/davideichenberger/Documents/GitHub/maqueen/node_modules/@serialport/stream/dist/index.js:101:37)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:224:18
+    at new Promise (<anonymous>)
+    at MicrobitController.openPort (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:223:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:287:32
+    at new Promise (<anonymous>)
+    at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:280:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:419:33
+
+[2025-10-07T14:05:04.909Z] [ConnectionError] try open port
+Error: Port is opening
+    at SerialPort.open (/Users/davideichenberger/Documents/GitHub/maqueen/node_modules/@serialport/stream/dist/index.js:101:37)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:224:18
+    at new Promise (<anonymous>)
+    at MicrobitController.openPort (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:223:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:287:32
+    at new Promise (<anonymous>)
+    at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:280:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:419:33
+
+[2025-10-07T14:05:04.916Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T14:05:04.925Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T14:05:04.935Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T14:05:05.913Z] [ExecuteError] executeCommand
+"timeOutSayHello"
+
+[2025-10-07T14:05:05.914Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOutSayHello
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:448:35
+
+[2025-10-07T14:05:05.914Z] [UserAction] actionFrame
+CustomError: The Micro:bit does not react as desired. Press the reset button on Micro:bit.
+    at MicrobitController.checkMicroPython (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:342:19)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:93:25
+    at actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:40:17)
+    at Kb.h (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:41557)
+
+[2025-10-07T14:06:26.571Z] [ExecuteError] executeCommand
+"timeOut"
+
+[2025-10-07T14:06:26.572Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOut
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:448:35
+
+[2025-10-07T14:06:26.572Z] [UserAction] actionFrame
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOut
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:448:35
+
+[2025-10-07T14:06:30.646Z] [ExecuteError] executeCommand
+"timeOutSayHello"
+
+[2025-10-07T14:06:30.647Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOutSayHello
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:448:35
+
+[2025-10-07T14:06:30.647Z] [UserAction] actionFrame
+CustomError: The Micro:bit does not react as desired. Press the reset button on Micro:bit.
+    at MicrobitController.checkMicroPython (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:342:19)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:93:25
+    at actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:40:17)
+    at Kb.h (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:41557)
+
+[2025-10-07T14:06:38.640Z] [ExecuteError] executeCommand
+"timeOutSayHello"
+
+[2025-10-07T14:06:38.641Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOutSayHello
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:448:35
+
+[2025-10-07T14:06:38.641Z] [UserAction] actionFrame
+CustomError: The Micro:bit does not react as desired. Press the reset button on Micro:bit.
+    at MicrobitController.checkMicroPython (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:342:19)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:93:25
+    at actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:40:17)
+    at Kb.h (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:41557)
+
+[2025-10-07T14:14:33.858Z] [ExecuteError] executeCommand
+"timeOut"
+
+[2025-10-07T14:14:33.861Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOut
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:448:35
+
+[2025-10-07T14:14:33.861Z] [UserAction] actionFrame
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOut
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:448:35
+
+[2025-10-07T14:16:21.091Z] [ExecuteError] executeCommand
+"timeOut"
+
+[2025-10-07T14:16:21.093Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOut
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:448:35
+
+[2025-10-07T14:16:21.094Z] [UserAction] actionFrame
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOut
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:448:35
+
+[2025-10-07T14:33:58.795Z] [ExecuteError] executeCommand
+"timeOutSayHello"
+
+[2025-10-07T14:33:58.796Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOutSayHello
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:448:35
+
+[2025-10-07T14:33:58.796Z] [UserAction] actionFrame
+CustomError: The Micro:bit does not react as desired. Press the reset button on Micro:bit.
+    at MicrobitController.checkMicroPython (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:342:19)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:93:25
+    at actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:40:17)
+    at Kb.h (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:41557)
+
+[2025-10-07T14:34:05.547Z] [ExecuteError] executeCommand
+"timeOutSayHello"
+
+[2025-10-07T14:34:05.548Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOutSayHello
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:448:35
+
+[2025-10-07T14:34:05.548Z] [UserAction] actionFrame
+CustomError: The Micro:bit does not react as desired. Press the reset button on Micro:bit.
+    at MicrobitController.checkMicroPython (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:342:19)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:93:25
+    at actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:40:17)
+    at Kb.h (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:41557)
+
+[2025-10-07T14:34:32.993Z] [ExecuteError] executeCommand
+"timeOutSayHello"
+
+[2025-10-07T14:34:32.993Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOutSayHello
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:448:35
+
+[2025-10-07T14:34:32.994Z] [UserAction] actionFrame
+CustomError: The Micro:bit does not react as desired. Press the reset button on Micro:bit.
+    at MicrobitController.checkMicroPython (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:342:19)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:93:25
+    at actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:40:17)
+    at Kb.h (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:41557)
+
+[2025-10-07T14:34:46.513Z] [ExecuteError] executeCommand
+"timeOutSayHello"
+
+[2025-10-07T14:34:46.514Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOutSayHello
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:448:35
+
+[2025-10-07T14:34:46.514Z] [UserAction] actionFrame
+CustomError: The Micro:bit does not react as desired. Press the reset button on Micro:bit.
+    at MicrobitController.checkMicroPython (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:342:19)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:93:25
+    at actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:40:17)
+    at Kb.h (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:41557)
+
+[2025-10-07T14:35:03.258Z] [ExecuteError] executeCommand
+"timeOutSayHello"
+
+[2025-10-07T14:35:03.259Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOutSayHello
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:448:35
+
+[2025-10-07T14:35:03.260Z] [UserAction] actionFrame
+CustomError: The Micro:bit does not react as desired. Press the reset button on Micro:bit.
+    at MicrobitController.checkMicroPython (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:342:19)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:93:25
+    at actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:40:17)
+    at Kb.h (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:41557)
+
+[2025-10-07T14:35:11.478Z] [ExecuteError] executeCommand
+"timeOutSayHello"
+
+[2025-10-07T14:35:11.479Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOutSayHello
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:448:35
+
+[2025-10-07T14:35:11.479Z] [UserAction] actionFrame
+CustomError: The Micro:bit does not react as desired. Press the reset button on Micro:bit.
+    at MicrobitController.checkMicroPython (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:342:19)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:93:25
+    at actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:40:17)
+    at Kb.h (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:41557)
+
+[2025-10-07T14:35:42.085Z] [ExecuteError] executeCommand
+"timeOutSayHello"
+
+[2025-10-07T14:35:42.087Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOutSayHello
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:448:35
+
+[2025-10-07T14:35:42.087Z] [UserAction] actionFrame
+CustomError: The Micro:bit does not react as desired. Press the reset button on Micro:bit.
+    at MicrobitController.checkMicroPython (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:342:19)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:93:25
+    at actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:40:17)
+    at Kb.h (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:41557)
+
+[2025-10-07T14:35:52.798Z] [ConnectionError] openPort
+Error: Error: No such file or directory, cannot open /dev/tty.usbmodem1102
+
+[2025-10-07T14:35:52.799Z] [ConnectionError] try open port
+Error: Error: No such file or directory, cannot open /dev/tty.usbmodem1102
+
+[2025-10-07T14:35:52.802Z] [ConnectionError] failed to find or open a port
+CustomError: No microbit was recognised.
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:216:24
+
+[2025-10-07T14:35:52.803Z] [UserAction] actionFrame
+CustomError: No serial port could be opened.
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:304:24
+
+[2025-10-07T14:35:59.459Z] [ExecuteError] executeCommand
+"timeOutSayHello"
+
+[2025-10-07T14:35:59.460Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOutSayHello
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:448:35
+
+[2025-10-07T14:35:59.460Z] [UserAction] actionFrame
+CustomError: The Micro:bit does not react as desired. Press the reset button on Micro:bit.
+    at MicrobitController.checkMicroPython (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:342:19)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:93:25
+    at actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:40:17)
+    at Kb.h (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:41557)
+
+[2025-10-07T14:43:35.738Z] [ExecuteError] executeCommand
+"timeOutSayHello"
+
+[2025-10-07T14:43:35.740Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOutSayHello
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:448:35
+
+[2025-10-07T14:43:35.740Z] [UserAction] actionFrame
+CustomError: The Micro:bit does not react as desired. Press the reset button on Micro:bit.
+    at MicrobitController.checkMicroPython (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:342:19)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:93:25
+    at actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:40:17)
+    at Kb.h (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:41557)
+
+[2025-10-07T14:43:44.075Z] [ExecuteError] executeCommand
+"timeOutSayHello"
+
+[2025-10-07T14:43:44.076Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOutSayHello
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:448:35
+
+[2025-10-07T14:43:44.076Z] [UserAction] actionFrame
+CustomError: The Micro:bit does not react as desired. Press the reset button on Micro:bit.
+    at MicrobitController.checkMicroPython (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:342:19)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:93:25
+    at actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:40:17)
+    at Kb.h (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:41557)
+
+[2025-10-07T14:44:10.442Z] [ExecuteError] executeCommand
+"timeOutSayHello"
+
+[2025-10-07T14:44:10.443Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOutSayHello
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:448:35
+
+[2025-10-07T14:44:10.443Z] [UserAction] actionFrame
+CustomError: The Micro:bit does not react as desired. Press the reset button on Micro:bit.
+    at MicrobitController.checkMicroPython (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:342:19)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:93:25
+    at actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:40:17)
+    at Kb.h (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:41557)
+
+[2025-10-07T14:44:51.281Z] [ExecuteError] executeCommand
+"timeOutSayHello"
+
+[2025-10-07T14:44:51.283Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOutSayHello
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:448:35
+
+[2025-10-07T14:44:51.283Z] [UserAction] actionFrame
+CustomError: The Micro:bit does not react as desired. Press the reset button on Micro:bit.
+    at MicrobitController.checkMicroPython (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:342:19)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:93:25
+    at actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:40:17)
+    at Kb.h (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:41557)
+
+[2025-10-07T14:45:04.812Z] [ExecuteError] executeCommand
+"timeOutSayHello"
+
+[2025-10-07T14:45:04.813Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOutSayHello
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:448:35
+
+[2025-10-07T14:45:04.813Z] [UserAction] actionFrame
+CustomError: The Micro:bit does not react as desired. Press the reset button on Micro:bit.
+    at MicrobitController.checkMicroPython (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:342:19)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:93:25
+    at actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:40:17)
+    at Kb.h (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:41557)
+
+[2025-10-07T14:45:10.307Z] [ExecuteError] execute
+"timeoutAfterRaw"
+
+[2025-10-07T14:45:10.307Z] [UserAction] actionFrame
+CustomError: timeoutAfterRaw
+    at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/src/exception.ts:40:12)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:476:36
+
+[2025-10-07T14:45:17.871Z] [ExecuteError] execute
+"timeoutAfterRaw"
+
+[2025-10-07T14:45:17.872Z] [UserAction] actionFrame
+CustomError: timeoutAfterRaw
+    at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/src/exception.ts:40:12)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:476:36
+
+[2025-10-07T15:46:48.835Z] [ConnectionError] openPort
+Error: Port is opening
+    at SerialPort.open (/Users/davideichenberger/Documents/GitHub/maqueen/node_modules/@serialport/stream/dist/index.js:101:37)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:225:18
+    at new Promise (<anonymous>)
+    at MicrobitController.openPort (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:224:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:288:32
+    at new Promise (<anonymous>)
+    at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:281:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:410:38
+    at new Promise (<anonymous>)
+    at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:408:16)
+    at MicrobitController.machineReset (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:562:20)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:71:36
+    at actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:40:17)
+    at Kb.h (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:41557)
+
+[2025-10-07T15:46:48.838Z] [ConnectionError] try open port
+Error: Port is opening
+    at SerialPort.open (/Users/davideichenberger/Documents/GitHub/maqueen/node_modules/@serialport/stream/dist/index.js:101:37)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:225:18
+    at new Promise (<anonymous>)
+    at MicrobitController.openPort (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:224:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:288:32
+    at new Promise (<anonymous>)
+    at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:281:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:410:38
+    at new Promise (<anonymous>)
+    at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:408:16)
+    at MicrobitController.machineReset (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:562:20)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:71:36
+    at actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:40:17)
+    at Kb.h (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:41557)
+
+[2025-10-07T15:46:48.839Z] [ConnectionError] openPort
+Error: Port is opening
+    at SerialPort.open (/Users/davideichenberger/Documents/GitHub/maqueen/node_modules/@serialport/stream/dist/index.js:101:37)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:225:18
+    at new Promise (<anonymous>)
+    at MicrobitController.openPort (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:224:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:288:32
+    at new Promise (<anonymous>)
+    at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:281:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:487:41
+    at new Promise (<anonymous>)
+    at MicrobitController.raw_on (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:485:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:413:32
+
+[2025-10-07T15:46:48.839Z] [ConnectionError] try open port
+Error: Port is opening
+    at SerialPort.open (/Users/davideichenberger/Documents/GitHub/maqueen/node_modules/@serialport/stream/dist/index.js:101:37)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:225:18
+    at new Promise (<anonymous>)
+    at MicrobitController.openPort (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:224:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:288:32
+    at new Promise (<anonymous>)
+    at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:281:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:487:41
+    at new Promise (<anonymous>)
+    at MicrobitController.raw_on (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:485:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:413:32
+
+[2025-10-07T15:46:48.868Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:46:48.879Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:46:48.909Z] [ConnectionError] openPort
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:46:48.909Z] [ConnectionError] try open port
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:46:48.918Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:46:48.931Z] [ConnectionError] openPort
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:46:48.931Z] [ConnectionError] try open port
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:46:48.940Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:46:48.953Z] [ConnectionError] openPort
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:46:48.953Z] [ConnectionError] try open port
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:46:48.962Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:46:48.973Z] [ConnectionError] openPort
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:46:48.973Z] [ConnectionError] try open port
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:46:48.985Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:46:49.976Z] [ExecuteError] execute
+"timeoutAfterRaw"
+
+[2025-10-07T15:46:49.976Z] [UserAction] actionFrame
+CustomError: timeoutAfterRaw
+    at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/src/exception.ts:40:12)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:477:36
+
+[2025-10-07T15:46:58.289Z] [ConnectionError] openPort
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:46:58.290Z] [ConnectionError] try open port
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:46:58.291Z] [ConnectionError] openPort
+Error: Port is opening
+    at SerialPort.open (/Users/davideichenberger/Documents/GitHub/maqueen/node_modules/@serialport/stream/dist/index.js:101:37)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:225:18
+    at new Promise (<anonymous>)
+    at MicrobitController.openPort (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:224:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:288:32
+    at new Promise (<anonymous>)
+    at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:281:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:410:38
+    at new Promise (<anonymous>)
+    at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:408:16)
+    at MicrobitController.machineReset (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:562:20)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:71:36
+    at actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:40:17)
+    at Kb.h (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:41557)
+
+[2025-10-07T15:46:58.292Z] [ConnectionError] try open port
+Error: Port is opening
+    at SerialPort.open (/Users/davideichenberger/Documents/GitHub/maqueen/node_modules/@serialport/stream/dist/index.js:101:37)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:225:18
+    at new Promise (<anonymous>)
+    at MicrobitController.openPort (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:224:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:288:32
+    at new Promise (<anonymous>)
+    at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:281:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:410:38
+    at new Promise (<anonymous>)
+    at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:408:16)
+    at MicrobitController.machineReset (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:562:20)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:71:36
+    at actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:40:17)
+    at Kb.h (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:41557)
+
+[2025-10-07T15:46:58.293Z] [ConnectionError] openPort
+Error: Port is opening
+    at SerialPort.open (/Users/davideichenberger/Documents/GitHub/maqueen/node_modules/@serialport/stream/dist/index.js:101:37)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:225:18
+    at new Promise (<anonymous>)
+    at MicrobitController.openPort (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:224:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:288:32
+    at new Promise (<anonymous>)
+    at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:281:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:487:41
+    at new Promise (<anonymous>)
+    at MicrobitController.raw_on (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:485:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:413:32
+
+[2025-10-07T15:46:58.293Z] [ConnectionError] try open port
+Error: Port is opening
+    at SerialPort.open (/Users/davideichenberger/Documents/GitHub/maqueen/node_modules/@serialport/stream/dist/index.js:101:37)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:225:18
+    at new Promise (<anonymous>)
+    at MicrobitController.openPort (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:224:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:288:32
+    at new Promise (<anonymous>)
+    at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:281:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:487:41
+    at new Promise (<anonymous>)
+    at MicrobitController.raw_on (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:485:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:413:32
+
+[2025-10-07T15:46:58.298Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:46:58.308Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:46:58.319Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:46:58.366Z] [ConnectionError] openPort
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:46:58.366Z] [ConnectionError] try open port
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:46:58.377Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:46:58.386Z] [ConnectionError] openPort
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:46:58.386Z] [ConnectionError] try open port
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:46:58.396Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:46:58.406Z] [ConnectionError] openPort
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:46:58.406Z] [ConnectionError] try open port
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:46:58.418Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:46:58.430Z] [ConnectionError] openPort
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:46:58.430Z] [ConnectionError] try open port
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:46:58.442Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:46:59.436Z] [ExecuteError] execute
+"timeoutAfterRaw"
+
+[2025-10-07T15:46:59.437Z] [UserAction] actionFrame
+CustomError: timeoutAfterRaw
+    at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/src/exception.ts:40:12)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:477:36
+
+[2025-10-07T15:47:03.642Z] [ConnectionError] openPort
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:47:03.643Z] [ConnectionError] try open port
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:47:03.656Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:47:12.785Z] [ConnectionError] openPort
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:47:12.785Z] [ConnectionError] try open port
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:47:12.796Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:47:12.907Z] [ConnectionError] openPort
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:47:12.907Z] [ConnectionError] try open port
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:47:12.910Z] [ConnectionError] openPort
+Error: Port is opening
+    at SerialPort.open (/Users/davideichenberger/Documents/GitHub/maqueen/node_modules/@serialport/stream/dist/index.js:101:37)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:225:18
+    at new Promise (<anonymous>)
+    at MicrobitController.openPort (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:224:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:288:32
+    at new Promise (<anonymous>)
+    at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:281:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:420:33
+
+[2025-10-07T15:47:12.910Z] [ConnectionError] try open port
+Error: Port is opening
+    at SerialPort.open (/Users/davideichenberger/Documents/GitHub/maqueen/node_modules/@serialport/stream/dist/index.js:101:37)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:225:18
+    at new Promise (<anonymous>)
+    at MicrobitController.openPort (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:224:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:288:32
+    at new Promise (<anonymous>)
+    at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:281:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:420:33
+
+[2025-10-07T15:47:12.920Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:47:12.931Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:47:13.918Z] [ExecuteError] executeCommand
+"timeOutSayHello"
+
+[2025-10-07T15:47:13.919Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOutSayHello
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:449:35
+
+[2025-10-07T15:47:13.920Z] [UserAction] actionFrame
+CustomError: The Micro:bit does not react as desired. Press the reset button on Micro:bit.
+    at MicrobitController.checkMicroPython (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:343:19)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:94:25
+    at actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:40:17)
+    at Kb.h (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:41557)
+
+[2025-10-07T15:47:21.589Z] [ConnectionError] openPort
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:47:21.589Z] [ConnectionError] try open port
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:47:21.591Z] [ConnectionError] openPort
+Error: Port is opening
+    at SerialPort.open (/Users/davideichenberger/Documents/GitHub/maqueen/node_modules/@serialport/stream/dist/index.js:101:37)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:225:18
+    at new Promise (<anonymous>)
+    at MicrobitController.openPort (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:224:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:288:32
+    at new Promise (<anonymous>)
+    at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:281:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:410:38
+    at new Promise (<anonymous>)
+    at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:408:16)
+    at MicrobitController.machineReset (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:562:20)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:71:36
+    at actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:40:17)
+    at Kb.h (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:41557)
+
+[2025-10-07T15:47:21.592Z] [ConnectionError] try open port
+Error: Port is opening
+    at SerialPort.open (/Users/davideichenberger/Documents/GitHub/maqueen/node_modules/@serialport/stream/dist/index.js:101:37)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:225:18
+    at new Promise (<anonymous>)
+    at MicrobitController.openPort (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:224:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:288:32
+    at new Promise (<anonymous>)
+    at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:281:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:410:38
+    at new Promise (<anonymous>)
+    at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:408:16)
+    at MicrobitController.machineReset (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:562:20)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:71:36
+    at actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:40:17)
+    at Kb.h (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:41557)
+
+[2025-10-07T15:47:21.593Z] [ConnectionError] openPort
+Error: Port is opening
+    at SerialPort.open (/Users/davideichenberger/Documents/GitHub/maqueen/node_modules/@serialport/stream/dist/index.js:101:37)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:225:18
+    at new Promise (<anonymous>)
+    at MicrobitController.openPort (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:224:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:288:32
+    at new Promise (<anonymous>)
+    at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:281:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:487:41
+    at new Promise (<anonymous>)
+    at MicrobitController.raw_on (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:485:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:413:32
+
+[2025-10-07T15:47:21.593Z] [ConnectionError] try open port
+Error: Port is opening
+    at SerialPort.open (/Users/davideichenberger/Documents/GitHub/maqueen/node_modules/@serialport/stream/dist/index.js:101:37)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:225:18
+    at new Promise (<anonymous>)
+    at MicrobitController.openPort (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:224:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:288:32
+    at new Promise (<anonymous>)
+    at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:281:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:487:41
+    at new Promise (<anonymous>)
+    at MicrobitController.raw_on (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:485:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:413:32
+
+[2025-10-07T15:47:21.602Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:47:21.610Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:47:21.621Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:47:21.663Z] [ConnectionError] openPort
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:47:21.664Z] [ConnectionError] try open port
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:47:21.678Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:47:21.690Z] [ConnectionError] openPort
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:47:21.690Z] [ConnectionError] try open port
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:47:21.702Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:47:21.714Z] [ConnectionError] openPort
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:47:21.715Z] [ConnectionError] try open port
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:47:21.728Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:47:21.739Z] [ConnectionError] openPort
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:47:21.739Z] [ConnectionError] try open port
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:47:21.750Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:47:22.747Z] [ExecuteError] execute
+"timeoutAfterRaw"
+
+[2025-10-07T15:47:22.748Z] [UserAction] actionFrame
+CustomError: timeoutAfterRaw
+    at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/src/exception.ts:40:12)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:477:36
+
+[2025-10-07T15:48:06.414Z] [ConnectionError] openPort
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:48:06.415Z] [ConnectionError] try open port
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:48:06.428Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:48:06.536Z] [ConnectionError] openPort
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:48:06.537Z] [ConnectionError] try open port
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:48:06.539Z] [ConnectionError] openPort
+Error: Port is opening
+    at SerialPort.open (/Users/davideichenberger/Documents/GitHub/maqueen/node_modules/@serialport/stream/dist/index.js:101:37)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:225:18
+    at new Promise (<anonymous>)
+    at MicrobitController.openPort (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:224:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:288:32
+    at new Promise (<anonymous>)
+    at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:281:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:420:33
+
+[2025-10-07T15:48:06.539Z] [ConnectionError] try open port
+Error: Port is opening
+    at SerialPort.open (/Users/davideichenberger/Documents/GitHub/maqueen/node_modules/@serialport/stream/dist/index.js:101:37)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:225:18
+    at new Promise (<anonymous>)
+    at MicrobitController.openPort (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:224:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:288:32
+    at new Promise (<anonymous>)
+    at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:281:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:420:33
+
+[2025-10-07T15:48:06.548Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:48:06.560Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:48:07.544Z] [ExecuteError] executeCommand
+"timeOutSayHello"
+
+[2025-10-07T15:48:07.544Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOutSayHello
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:449:35
+
+[2025-10-07T15:48:07.545Z] [UserAction] actionFrame
+CustomError: The Micro:bit does not react as desired. Press the reset button on Micro:bit.
+    at MicrobitController.checkMicroPython (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:343:19)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:94:25
+    at actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:40:17)
+    at Kb.h (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:41557)
+
+[2025-10-07T15:48:22.424Z] [ConnectionError] openPort
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:48:22.425Z] [ConnectionError] try open port
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:48:22.434Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:48:22.540Z] [ConnectionError] openPort
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:48:22.540Z] [ConnectionError] try open port
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:48:22.544Z] [ConnectionError] openPort
+Error: Port is opening
+    at SerialPort.open (/Users/davideichenberger/Documents/GitHub/maqueen/node_modules/@serialport/stream/dist/index.js:101:37)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:225:18
+    at new Promise (<anonymous>)
+    at MicrobitController.openPort (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:224:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:288:32
+    at new Promise (<anonymous>)
+    at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:281:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:420:33
+
+[2025-10-07T15:48:22.544Z] [ConnectionError] try open port
+Error: Port is opening
+    at SerialPort.open (/Users/davideichenberger/Documents/GitHub/maqueen/node_modules/@serialport/stream/dist/index.js:101:37)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:225:18
+    at new Promise (<anonymous>)
+    at MicrobitController.openPort (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:224:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:288:32
+    at new Promise (<anonymous>)
+    at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:281:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:420:33
+
+[2025-10-07T15:48:22.553Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:48:22.562Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:48:23.551Z] [ExecuteError] executeCommand
+"timeOutSayHello"
+
+[2025-10-07T15:48:23.552Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOutSayHello
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:449:35
+
+[2025-10-07T15:48:23.553Z] [UserAction] actionFrame
+CustomError: The Micro:bit does not react as desired. Press the reset button on Micro:bit.
+    at MicrobitController.checkMicroPython (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:343:19)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:94:25
+    at actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:40:17)
+    at Kb.h (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:41557)
+
+[2025-10-07T15:48:32.245Z] [ConnectionError] openPort
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:48:32.245Z] [ConnectionError] try open port
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:48:32.257Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:48:32.364Z] [ConnectionError] openPort
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:48:32.365Z] [ConnectionError] try open port
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:48:32.367Z] [ConnectionError] openPort
+Error: Port is opening
+    at SerialPort.open (/Users/davideichenberger/Documents/GitHub/maqueen/node_modules/@serialport/stream/dist/index.js:101:37)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:225:18
+    at new Promise (<anonymous>)
+    at MicrobitController.openPort (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:224:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:288:32
+    at new Promise (<anonymous>)
+    at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:281:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:420:33
+
+[2025-10-07T15:48:32.367Z] [ConnectionError] try open port
+Error: Port is opening
+    at SerialPort.open (/Users/davideichenberger/Documents/GitHub/maqueen/node_modules/@serialport/stream/dist/index.js:101:37)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:225:18
+    at new Promise (<anonymous>)
+    at MicrobitController.openPort (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:224:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:288:32
+    at new Promise (<anonymous>)
+    at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:281:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:420:33
+
+[2025-10-07T15:48:32.376Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:48:32.386Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:48:33.373Z] [ExecuteError] executeCommand
+"timeOutSayHello"
+
+[2025-10-07T15:48:33.374Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOutSayHello
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:449:35
+
+[2025-10-07T15:48:33.375Z] [UserAction] actionFrame
+CustomError: The Micro:bit does not react as desired. Press the reset button on Micro:bit.
+    at MicrobitController.checkMicroPython (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:343:19)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:94:25
+    at actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:40:17)
+    at Kb.h (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:41557)
+
+[2025-10-07T15:49:07.937Z] [ConnectionError] openPort
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:49:07.937Z] [ConnectionError] try open port
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:49:07.941Z] [ConnectionError] portError
+Error: Port is not open
+    at SerialPort.close (/Users/davideichenberger/Documents/GitHub/maqueen/node_modules/@serialport/stream/dist/index.js:235:37)
+    at MicrobitController.close (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:315:18)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:79:25
+    at actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:40:17)
+    at Kb.h (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:41557)
+
+[2025-10-07T15:49:07.949Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:49:10.324Z] [ConnectionError] portError
+Error: Port is not open
+    at SerialPort.close (/Users/davideichenberger/Documents/GitHub/maqueen/node_modules/@serialport/stream/dist/index.js:235:37)
+    at MicrobitController.close (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:315:18)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:79:25
+    at actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:40:17)
+    at Kb.h (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:41557)
+
+[2025-10-07T15:49:10.333Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:49:13.173Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:49:20.635Z] [ConnectionError] openPort
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:49:20.635Z] [ConnectionError] try open port
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:49:20.646Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:49:20.757Z] [ConnectionError] openPort
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:49:20.757Z] [ConnectionError] try open port
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:49:20.759Z] [ConnectionError] openPort
+Error: Port is opening
+    at SerialPort.open (/Users/davideichenberger/Documents/GitHub/maqueen/node_modules/@serialport/stream/dist/index.js:101:37)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:225:18
+    at new Promise (<anonymous>)
+    at MicrobitController.openPort (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:224:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:288:32
+    at new Promise (<anonymous>)
+    at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:281:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:420:33
+
+[2025-10-07T15:49:20.760Z] [ConnectionError] try open port
+Error: Port is opening
+    at SerialPort.open (/Users/davideichenberger/Documents/GitHub/maqueen/node_modules/@serialport/stream/dist/index.js:101:37)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:225:18
+    at new Promise (<anonymous>)
+    at MicrobitController.openPort (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:224:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:288:32
+    at new Promise (<anonymous>)
+    at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:281:16)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:420:33
+
+[2025-10-07T15:49:20.768Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:49:20.780Z] [ConnectionError] portError
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2025-10-07T15:49:21.766Z] [ExecuteError] executeCommand
+"timeOutSayHello"
+
+[2025-10-07T15:49:21.767Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOutSayHello
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:449:35
+
+[2025-10-07T15:49:21.768Z] [UserAction] actionFrame
+CustomError: The Micro:bit does not react as desired. Press the reset button on Micro:bit.
+    at MicrobitController.checkMicroPython (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:343:19)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:94:25
+    at actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:40:17)
+    at Kb.h (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:41557)
+
+[2025-10-07T15:49:53.603Z] [ExecuteError] execute
+"timeoutAfterRaw"
+
+[2025-10-07T15:49:53.603Z] [UserAction] actionFrame
+CustomError: timeoutAfterRaw
+    at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/src/exception.ts:40:12)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:477:36
+
+[2025-10-07T15:50:15.870Z] [ExecuteError] execute
+"timeoutAfterRaw"
+
+[2025-10-07T15:50:15.871Z] [UserAction] actionFrame
+CustomError: timeoutAfterRaw
+    at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/src/exception.ts:40:12)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:477:36
+
+[2025-10-07T15:50:17.240Z] [ExecuteError] execute
+"timeoutAfterRaw"
+
+[2025-10-07T15:50:17.241Z] [UserAction] actionFrame
+CustomError: timeoutAfterRaw
+    at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/src/exception.ts:40:12)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:477:36
+
+[2025-10-07T15:50:22.653Z] [ExecuteError] execute
+"timeoutAfterRaw"
+
+[2025-10-07T15:50:22.654Z] [UserAction] actionFrame
+CustomError: timeoutAfterRaw
+    at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/src/exception.ts:40:12)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:477:36
+
+[2025-10-07T15:50:24.066Z] [ExecuteError] execute
+"timeoutAfterRaw"
+
+[2025-10-07T15:50:24.067Z] [UserAction] actionFrame
+CustomError: timeoutAfterRaw
+    at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/src/exception.ts:40:12)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:477:36
+
+[2025-10-07T15:52:06.281Z] [ExecuteError] execute
+"timeoutAfterRaw"
+
+[2025-10-07T15:52:06.282Z] [UserAction] actionFrame
+CustomError: timeoutAfterRaw
+    at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/src/exception.ts:40:12)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:477:36
+
+[2025-10-07T15:56:49.268Z] [ExecuteError] execute
+"timeoutAfterRaw"
+
+[2025-10-07T15:56:49.269Z] [UserAction] actionFrame
+CustomError: timeoutAfterRaw
+    at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/src/exception.ts:40:12)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:479:36
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at processTimers (node:internal/timers:520:9)
+
+[2025-10-07T15:56:53.801Z] [ExecuteError] execute
+"timeoutAfterRaw"
+
+[2025-10-07T15:56:53.802Z] [UserAction] actionFrame
+CustomError: timeoutAfterRaw
+    at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/src/exception.ts:40:12)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:479:36
+
+[2025-10-07T15:57:01.982Z] [ExecuteError] execute
+"timeoutAfterRaw"
+
+[2025-10-07T15:57:01.983Z] [UserAction] actionFrame
+CustomError: timeoutAfterRaw
+    at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/src/exception.ts:40:12)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:479:36
+
+[2025-10-07T15:57:21.372Z] [ExecuteError] execute
+"timeoutAfterRaw"
+
+[2025-10-07T15:57:21.373Z] [UserAction] actionFrame
+CustomError: timeoutAfterRaw
+    at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/src/exception.ts:40:12)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:479:36
+
+[2025-10-07T15:57:37.376Z] [ExecuteError] executeCommand
+"timeOutSayHello"
+
+[2025-10-07T15:57:37.377Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOutSayHello
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:451:35
+
+[2025-10-07T15:57:37.378Z] [UserAction] actionFrame
+CustomError: The Micro:bit does not react as desired. Press the reset button on Micro:bit.
+    at MicrobitController.checkMicroPython (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:345:19)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:96:25
+    at actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:40:17)
+    at Kb.h (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:41557)
+
+[2025-10-07T15:58:29.034Z] [ExecuteError] execute
+"timeoutAfterRaw"
+
+[2025-10-07T15:58:29.035Z] [UserAction] actionFrame
+CustomError: timeoutAfterRaw
+    at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/src/exception.ts:40:12)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:479:36
+
+[2025-10-07T15:58:44.346Z] [ExecuteError] execute
+"timeoutAfterRaw"
+
+[2025-10-07T15:58:44.347Z] [UserAction] actionFrame
+CustomError: timeoutAfterRaw
+    at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/src/exception.ts:40:12)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:479:36
+
+[2025-10-07T16:10:11.043Z] [ExecuteError] execute
+"timeoutAfterRaw"
+
+[2025-10-07T16:10:11.044Z] [UserAction] actionFrame
+CustomError: timeoutAfterRaw
+    at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/src/exception.ts:40:12)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:479:36
+
+[2025-10-07T16:10:22.453Z] [ExecuteError] execute
+"timeoutAfterRaw"
+
+[2025-10-07T16:10:22.453Z] [UserAction] actionFrame
+CustomError: timeoutAfterRaw
+    at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/src/exception.ts:40:12)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:479:36
+
+[2025-10-07T16:10:40.338Z] [ExecuteError] execute
+"timeoutAfterRaw"
+
+[2025-10-07T16:10:40.339Z] [UserAction] actionFrame
+CustomError: timeoutAfterRaw
+    at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/src/exception.ts:40:12)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:479:36
+
+[2025-10-07T16:13:31.120Z] [ExecuteError] execute
+"timeoutAfterRaw"
+
+[2025-10-07T16:13:31.121Z] [UserAction] actionFrame
+CustomError: timeoutAfterRaw
+    at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/src/exception.ts:40:12)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:479:36
+
+[2025-10-07T16:13:42.462Z] [ExecuteError] execute
+"timeoutAfterRaw"
+
+[2025-10-07T16:13:42.462Z] [UserAction] actionFrame
+CustomError: timeoutAfterRaw
+    at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/src/exception.ts:40:12)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:479:36
+
+[2025-10-07T16:14:48.945Z] [ExecuteError] execute
+"timeoutAfterRaw"
+
+[2025-10-07T16:14:48.946Z] [UserAction] actionFrame
+CustomError: timeoutAfterRaw
+    at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/src/exception.ts:40:12)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:479:36
+
+[2025-10-07T16:15:18.447Z] [ExecuteError] execute
+"timeoutAfterRaw"
+
+[2025-10-07T16:15:18.447Z] [UserAction] actionFrame
+CustomError: timeoutAfterRaw
+    at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/src/exception.ts:40:12)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:479:36
+
+[2025-10-07T16:16:36.348Z] [ExecuteError] execute
+"timeoutAfterRaw"
+
+[2025-10-07T16:16:36.348Z] [UserAction] actionFrame
+CustomError: timeoutAfterRaw
+    at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/src/exception.ts:40:12)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:479:36
+
+[2025-10-07T16:19:02.888Z] [ExecuteError] execute
+"timeoutAfterRaw"
+
+[2025-10-07T16:19:02.888Z] [UserAction] actionFrame
+CustomError: timeoutAfterRaw
+    at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/src/exception.ts:40:12)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:480:36
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at processTimers (node:internal/timers:520:9)
+
+[2025-10-07T16:25:36.219Z] [ExecuteError] execute
+"timeoutAfterRaw"
+
+[2025-10-07T16:25:36.220Z] [UserAction] actionFrame
+CustomError: timeoutAfterRaw
+    at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/src/exception.ts:40:12)
+    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:480:36
+

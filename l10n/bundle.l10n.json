@@ -11,7 +11,7 @@
   "No connection can be established with the Micro:bit. Check that it is correctly connected to your laptop with a USB cable.": "No connection can be established with the Micro:bit. Check that it is correctly connected to your laptop with a USB cable.",
   "There is a problem uploading a Python file to the Micro:bit. Try the following (one after the other):\nCheck whether the Micro:bit is correctly connected to the laptop.\nPress the reset button on the Micro:bit.\nPull out the USB plug and connect again.\nFlash MicroPython to the Micro:bit.": "There is a problem uploading a Python file to the Micro:bit. Try the following (one after the other):\nCheck whether the Micro:bit is correctly connected to the laptop.\nPress the reset button on the Micro:bit.\nPull out the USB plug and connect again.\nFlash MicroPython to the Micro:bit.",
   "Operating system is not supported.": "Operating system is not supported.",
-  "Port konnte nicht geschlossen werden.": "Port konnte nicht geschlossen werden.",
+  "Port could not be closed.": "Port could not be closed.",
   "File was too large for the available memory.": "File was too large for the available memory.",
   "A module file with the same name already exists.": "A module file with the same name already exists.",
   "The name is already reserved for an internal module.": "The name is already reserved for an internal module.",

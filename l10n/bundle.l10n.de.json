@@ -6,7 +6,7 @@
   "No connection can be established with the Micro:bit. Check that it is correctly connected to your laptop with a USB cable.": "Es kann keine Verbindung mit dem Micro:bit hergestellt werden. Kontrolliere, ob er korrekt mit einem USB-Kabel mit deinem Laptop verbunden ist.",
   "There is a problem uploading a Python file to the Micro:bit. Try the following (one after the other):\nCheck whether the Micro:bit is correctly connected to the laptop.\nPress the reset button on the Micro:bit.\nPull out the USB plug and connect again.\nFlash MicroPython to the Micro:bit.": "Es gibt ein Problem beim Hochladen einer Python-Datei auf den Micro:bit. Versuchen Sie Folgendes (nacheinander):\nPrüfen Sie, ob das Micro:bit richtig an den Laptop angeschlossen ist.\nDrücken Sie die Reset-Taste am Micro:bit.\nZiehen Sie den USB-Stecker ab und schließen Sie ihn erneut an.\nFlashen Sie MicroPython auf das Micro:bit.",
   "Operating system is not supported.": "Betriebssystem wird nicht unterstützt.",
-  "Port konnte nicht geschlossen werden.": "Port konnte nicht geschlossen werden.",
+  "Port could not be closed.": "Port konnte nicht geschlossen werden.",
   "File was too large for the available memory.": "Datei war für den noch verfügbaren Speicher zu gross.",
   "There is no error text for the error type {0}./{0} ist ein Fehlertyp.": "Für den Fehlertyp {0} existiert keinen Fehlertext.",
   "Stops programme on Microbit": "Stoppt Programm auf Micro:bit.",

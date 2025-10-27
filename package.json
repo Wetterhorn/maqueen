@@ -10,7 +10,7 @@
     "Libraries/extern/gitHub",
     "Libraries/extern/local"
   ],
-  "version": "0.0.16",
+  "version": "0.0.18",
   "icon": "resources/extensionIcon.png",
   "repository": {
     "type": "git",
@@ -271,18 +271,17 @@
   },
   "devDependencies": {
     "@types/mocha": "^10.0.10",
-    "@types/node": "22.x",
-    "@types/vscode": "^1.95.0",
-    "@typescript-eslint/eslint-plugin": "^8.16.0",
-    "@typescript-eslint/parser": "^8.16.0",
-    "@vscode/test-electron": "^2.4.1",
-    "eslint": "^9.15.0",
-    "glob": "^11.0.0",
-    "mocha": "^10.8.2",
-    "pyright": "^1.1.389",
-    "typescript": "^5.7.2"
+    "@types/node": "24.9.1",
+    "@types/vscode": "^1.105.0",
+    "@typescript-eslint/eslint-plugin": "^8.46.2",
+    "@typescript-eslint/parser": "^8.46.2",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.38.0",
+    "glob": "^11.0.3",
+    "mocha": "^11.7.4",
+    "typescript": "^5.9.3"
   },
   "dependencies": {
-    "serialport": "^12.0.0"
+    "serialport": "^13.0.0"
   }
 }

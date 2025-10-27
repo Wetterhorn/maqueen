@@ -13,12 +13,14 @@ import { MicrobitController } from './controller/microbitController';
 import { ExtLibFileProvider } from './treeDataProvider/extLibFileProvider';
 import { registerExtLibFileCommands } from './commands/extLibFilesRelatedCommands';
 import { l10n } from 'vscode';
+import { ErrorLogger } from './util/logErrors';
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
 export async function activate(context: vscode.ExtensionContext) {
 	vscode.commands.executeCommand('setContext', 'maqueen.fileUploadRunning', false);
 	vscode.commands.executeCommand('setContext', 'maqueen.extensionActivated', false);
+	ErrorLogger.getInstance().init(context);
 	vscode.window.registerTreeDataProvider('welcome', new WelcomeDummyProvider());
 	const rootPath = (vscode.workspace.workspaceFolders && (vscode.workspace.workspaceFolders.length > 0))
 		? vscode.workspace.workspaceFolders[0].uri.fsPath : undefined;

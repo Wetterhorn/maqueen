@@ -30,7 +30,7 @@ function getMicrobitDrives() {
                         }
                         reject(new CustomError('No micro:bit was found.', errorType.noMicrobit, 311));
                     } else {
-                        resolve(drives);
+                        resolve(mdrives);
                     }
                 }
             });
@@ -80,9 +80,11 @@ export async function flashMicrobit(extensionPath: string, send: Function) {
     const sourceFilePath = path.join(extensionPath, 'micropython.hex');
     try {
         const microbitDrives = await getMicrobitDrives();
+        console.log(microbitDrives)
         const data = await vscode.workspace.fs.readFile(vscode.Uri.file(sourceFilePath));
         for (let i = 0; i < microbitDrives.length; i++) {
             const targetFilePath = path.join(microbitDrives[i], 'MICROBIT.hex');
+            console.log(targetFilePath)
             writeFileToMicrobit(data, vscode.Uri.file(targetFilePath), send);
             //vscode.workspace.fs.copy(vscode.Uri.file(sourceFilePath), vscode.Uri.file(targetFilePath));
         }
@@ -91,6 +93,7 @@ export async function flashMicrobit(extensionPath: string, send: Function) {
     }
 }
 async function writeFileToMicrobit(data: Uint8Array, targetUri: vscode.Uri, send: Function) {
+    console.log(targetUri)
     try {
         send(l10n.t({ message: 'Flash MicroPython to {0}. Please wait...', args: [targetUri.fsPath], comment: ['{0}: Path to Micro:bit'] }));
         await vscode.workspace.fs.writeFile(targetUri, data);

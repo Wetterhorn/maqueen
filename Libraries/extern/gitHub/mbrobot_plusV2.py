@@ -26,13 +26,16 @@ def setSpeed(speed):
         - default speed 50
         - range: -255 to 255
     """       
-    global _v
-    if speed > 255:
-        _v = 255
-    elif speed < -255:
-        _v = -255
-    else:
-        _v = speed 
+
+    if abs(speed) < 30:
+        print(" > minimal speed is 30")
+        return
+    elif abs(speed) > 255:
+        print(" > maximum speed is 255")
+        return
+     
+    global _v 
+    _v = speed 
 
 
 def stop():
@@ -282,6 +285,9 @@ def setBuzzer(frequency):
         - higher frequency means higher pitch
         - sound plays for 0.1 seconds
     """
+    if frequency < 20:
+        return 
+    
     music.pitch(frequency, 100, wait=False)
     
 def ir_read_values_as_byte():
@@ -338,7 +344,7 @@ class IRSensor:
     def __init__(self, index):
         self.index = index
         
-    def read_digital(self):
+    def isWhite(self):
         byte = ir_read_values_as_byte()
         return (byte & IR.masks[self.index]) >> self.index
 

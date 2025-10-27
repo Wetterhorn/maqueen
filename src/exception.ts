@@ -96,7 +96,7 @@ export async function error2user(error: VerboseError){
                 advice = l10n.t('Operating system is not supported.');
                 break;
             case errorType.portClose:
-                advice = l10n.t('Port konnte nicht geschlossen werden.');
+                advice = l10n.t('Port could not be closed.');
                 break;
             case errorType.memmory:
                 advice = l10n.t('File was too large for the available memory.');
@@ -126,5 +126,5 @@ export async function error2user(error: VerboseError){
                 advice = l10n.t({message: 'There is no error text for the error type {0}.', args: [error.type], comment:['{0} ist ein Fehlertyp.']});
         }
     }
-    const answer = await vscode.window.showErrorMessage(advice);
+    vscode.window.showErrorMessage(advice);
 }

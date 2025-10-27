@@ -9,6 +9,9 @@ import { ListenerInput } from '../types';
 import { flashMicrobit } from '../util/flashMicrobit';
 import { exec } from 'child_process';
 import { l10n } from 'vscode';
+import { ErrorType, logError } from '../util/logErrors';
+
+const MICROBIT_VID = "0d28"; // micro:bit / DAPLink (case-insensitive)
 
 /**
  * 
@@ -38,12 +41,13 @@ export class MicrobitController implements ActionHolder {
                 this.lock = true;
                 await action(p);
             } catch (err: any) {
+                logError(ErrorType.ACTION, "actionFrame", err);
                 await error2user(err);
             } finally {
-                this.lock = false;
                 if (finalAction) {
                     finalAction();
                 }
+                this.lock = false;
             }
         };
         return actionFrame;
@@ -62,22 +66,17 @@ export class MicrobitController implements ActionHolder {
                     }
                 );
             case 'stop':
-                return async () => {
-                    try {
-                        if (this.lock) {
-                            return;
-                        }
-                        this.lock = true;
-                        //this.analyser.clear();
-                        await this.connectToMicrobit();
+                return this.createActionFrame(
+                    async () => {
+                        vscode.commands.executeCommand('setContext', 'maqueen.fileUploadRunning', false);
+                        // await this.connectToMicrobit();
+                        // await sleep(2000)
+                        // await this.machineReset();
+                        // await sleep(2000);
+                        (await this.open()).write(Buffer.from([0x03]));
                         this.port!.write(Buffer.from([0x03]));
-                        this.port!.write(Buffer.from([0x03]));
-                    } catch (err: any) {
-                        await error2user(err);
-                    } finally {
-                        this.lock = false;
                     }
-                };
+                );
             case 'closePort':
                 return this.createActionFrame(
                     async () => {
@@ -88,6 +87,7 @@ export class MicrobitController implements ActionHolder {
             case 'uploadFile':
                 return this.createActionFrame(
                     async (file: any) => {
+                        vscode.commands.executeCommand('setContext', 'maqueen.fileUploadRunning', true);
                         this.analyser.clear();
                         this.analyser.setOn(false);
                         await this.connectToMicrobit();
@@ -95,7 +95,6 @@ export class MicrobitController implements ActionHolder {
                         await sleep(50);
                         this.port!.write(Buffer.from([0x03]));
                         await sleep(50);
-                        vscode.commands.executeCommand('setContext', 'maqueen.fileUploadRunning', true);
                         await this.checkMicroPython();
                         this.analyser.messageToOuputChannel(l10n.t({ message: 'Uploading {0}...', args: [file.label], comment: ['{0}: file name'] }));
                         await this.fileUpload(file);
@@ -180,7 +179,7 @@ export class MicrobitController implements ActionHolder {
                             prompt: "Befehl",
                             placeHolder: "Pythonbefehl"
                         });
-                        if (typeof c === 'string') { this.execute([c], false, false); }
+                        if (typeof c === 'string') { await this.execute([c], false, false); }
                         await sleep(200);
                     }
                 );
@@ -213,7 +212,7 @@ export class MicrobitController implements ActionHolder {
     private async lookForMicrobit(): Promise<string> {
         const p: Promise<string> = new Promise(async (resolve, reject) => {
             const portList = await SerialPort.list();
-            const port = portList.filter(p => p.vendorId?.toLowerCase() === '0d28');
+            const port = portList.filter(p => p.vendorId?.toLowerCase() === MICROBIT_VID);
             if (port.length === 1) {
                 resolve(port[0].path);
             } else if (port.length > 1) {
@@ -225,10 +224,11 @@ export class MicrobitController implements ActionHolder {
         return p;
     }
 
-    private openPort() {
+    private openPort(port: SerialPort) {
         return new Promise<void>((resolve, reject) => {
-            this.port?.open((err) => {
+            port.open((err) => {
                 if (err) {
+                    logError(ErrorType.CONNECTION, "openPort", err);
                     reject(err);
                 } else {
                     resolve();
@@ -236,49 +236,32 @@ export class MicrobitController implements ActionHolder {
             });
         });
     }
-    /**
-     * Versucht einen Port zu öffnen. Erstellt nur einen neuen Port, wenn noch keiner geöffnet ist.
-     */
-    private open = () => {
-        return new Promise<SerialPort>(async (resolve, reject) => {
-            if (this.port) {
-                if (this.port.isOpen) {
-                    resolve(this.port);
-                    return;
-                } else {
-                    try {
-                        await this.openPort();
-                        if (!this.port.isOpen) {
-                            throw new Error();
-                        }
-                        resolve(this.port);
-                    } catch (err: any) {
-                        reject(new CustomError(`The port ${this.port.path} could not be opened.`, errorType.noPort, 301));
-                    } finally {
-                        return;
-                    }
-                }
-            } else {
-                let portPath = '';
-                try {
-                    portPath = await this.lookForMicrobit();
-                } catch (err: any) {
-                    reject(err);
-                    return;
-                }
-                try {
-                    const p = new SerialPort({ path: portPath, baudRate: this.BAUD_RATE, autoOpen: true });
-                    this.port = p;
-                    this.parserRegistered = false;
-                    resolve(p);
-                } catch (err: any) {
-                    reject(new CustomError('No serial port could be opened.', errorType.noPort, 315));
-                } finally {
-                    return;
-                }
+    
+    private open = async () : Promise<SerialPort> => {
+        if(this.port?.isOpen) return this.port;
+        if(this.port){
+            try{
+                await this.openPort(this.port);
+                return this.port;
+            } catch(err) {
+                logError(ErrorType.CONNECTION, "try open port", err);
+                try { this.port.removeAllListeners(); this.port.destroy(); } catch {}
+                this.port = undefined;
             }
-        });
-    };
+        }
+            //port konnte nicht geöffnet werden oder es existiert noch keiner.
+            this.parserRegistered = false;
+            try {
+                const portPath = await this.lookForMicrobit();
+                const p = new SerialPort({ path: portPath, baudRate: this.BAUD_RATE, autoOpen: true });
+                this.port = p;
+                p.on("error", (err)=>{logError(ErrorType.CONNECTION, "portError", err);})
+                return p;
+            } catch(err){
+                logError(ErrorType.CONNECTION, "failed to find or open a port", err);
+                throw new CustomError('No serial port could be opened.', errorType.noPort, 315);
+            }
+    }
 
     private async close() {
         const port = await this.open();
@@ -286,6 +269,9 @@ export class MicrobitController implements ActionHolder {
             port.close();
         } catch (err: any) {
             throw new CustomError('Port could not be closed.', errorType.portClose, 313);
+        } finally {
+            this.port = undefined;
+            this.parserRegistered = false;
         }
     }
 
@@ -306,7 +292,7 @@ export class MicrobitController implements ActionHolder {
     }
     async checkMicroPython() {
         try {
-            const r = await this.execute([{ command: 'print("hello")', function: async () => await this.analyser.waitForPatern(/hello$/, 1000, 'timeOut') }], false, false);
+            const r = await this.execute([{ command: 'print("hello")', function: async () => await this.analyser.waitForPattern(/hello$/, 1000, 'timeOutSayHello') }], false, false);
         } catch (err: any) {
             throw new CustomError('The Micro:bit does not react as desired. Press the reset button on Micro:bit.', errorType.pressResetButton, 320);
         }
@@ -350,12 +336,12 @@ export class MicrobitController implements ActionHolder {
                 const bd = Buffer.from(data);
                 for (let i = 0; i < data.length; i = i + 54) {
                     //commands.push({ command: 'f(b' + JSON.stringify(data.substring(i, i + 54)) + ')', function: async () => await this.analyser.waitForPatern(/^[1-9][0-9]/, 5000, 'timeOut') });
-                    commands.push({ command: 'f(b' + JSON.stringify(bd.subarray(i, i + 54).toString().replace(/ä/g, '\\xc3\\xa4').replace(/ö/g, '\\xc3\\xb6').replace(/ü/g, '\\xc3\\xbc').replace(/Ä/g, '\\xc3\\x84').replace(/Ö/g, '\\xc3\\x96').replace(/Ü/g, '\\xc3\\x9C')) + ')', function: async () => await this.analyser.waitForPatern(/^[1-9][0-9]*/, 5000, 'timeOut') });
+                    commands.push({ command: 'f(b' + JSON.stringify(bd.subarray(i, i + 54).toString().replace(/ä/g, '\\xc3\\xa4').replace(/ö/g, '\\xc3\\xb6').replace(/ü/g, '\\xc3\\xbc').replace(/Ä/g, '\\xc3\\x84').replace(/Ö/g, '\\xc3\\x96').replace(/Ü/g, '\\xc3\\x9C')) + ')', function: async () => await this.analyser.waitForPattern(/^[1-9][0-9]*/, 5000, 'timeOut') });
                     if (i % 10 === 0) {
-                        commands.push({ command: 'print("s",gc.mem_free())', function: async () => await this.analyser.waitForPatern(/^s [0-9]+/, 5000, 'timeOut') });
+                        commands.push({ command: 'print("s",gc.mem_free())', function: async () => await this.analyser.waitForPattern(/^s [0-9]+/, 5000, 'timeOut') });
                     }
                 }
-                commands.push({ command: "fd.close()", function: async () => await this.analyser.waitForPatern(/^>>> fd.close\(\)$/, 5000, 'timeOut') });
+                commands.push({ command: "fd.close()", function: async () => await this.analyser.waitForPattern(/^>>> fd.close\(\)$/, 5000, 'timeOut') });
 
                 await this.execute(commands, softReboot, false, l10n.t({ message: '{0} was successfully uploaded.', args: [path.basename(filePath)], comment: ['{0}: file name'] }));
                 resolve();
@@ -387,7 +373,7 @@ export class MicrobitController implements ActionHolder {
                     let count = 0;
                     (await this.open()).write(commandBuffer, (err) => {
                         if (err) {
-                            console.log('Fehler beim Schreiben: ', err.message);
+                            logError(ErrorType.EXECUTE, "writeCommand", err);
                         }
                     });
                     // for (let i = 0; i < com.length; i = i + 32) {
@@ -413,6 +399,7 @@ export class MicrobitController implements ActionHolder {
                             const r = await command.function();
                             //await sleep(1000);
                         } catch (err) {
+                            logError(ErrorType.EXECUTE, "executeCommand", err);
                             throw new CustomError('In the execute function, a function linked to a command could not be executed. Error: ' + getErrorMessage(err, true), errorType.fileUpload, 305);
                         }
                     } else {
@@ -436,10 +423,11 @@ export class MicrobitController implements ActionHolder {
                 }
                 if (raw) {//raw mode verlassen
                     (await this.open()).write(Buffer.from([0x02]));
-                    await this.analyser.waitForPatern(/^Type/, 1000, 'timeout');
+                    await this.analyser.waitForPattern(/^Type/, 1000, 'timeoutAfterRaw');
                 }
                 resolve();
             } catch (err: any) {
+                logError(ErrorType.EXECUTE, "execute", err);
                 reject(forwardError(err, getErrorMessage(err, false), errorType.fileUpload, 306));
             }
         });
@@ -516,6 +504,14 @@ export class MicrobitController implements ActionHolder {
             'l=os.listdir()',
             'for f in l:',
             '    os.remove(f)',
+        ];
+        await this.execute(commands, false, true);
+    }
+
+     async machineReset() {
+        const commands = [
+            'import machine',
+            'machine.reset()'
         ];
         await this.execute(commands, false, true);
     }

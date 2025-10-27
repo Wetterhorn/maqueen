@@ -67,16 +67,16 @@ export class OutputDataAnalyser {
                 message: revealText('The error message ‘OSError: 28’ means that the memory of the micro:bit is full.', 'Die Fehlermeldung «OSError: 28» bedeutet, dass der Speicher des Micro:bits voll ist.'),
                 isError: true
             },
-            {
-                search: /^Traceback/,
-                message: revealText('Error in the Python script.', 'Fehler im Pythonskript.'),
-                isError: false
-            },
-            {
-                search: /Error/,
-                message: revealText('Error in Python script', 'Fehler im Pythonskript.'),
-                isError: true
-            },
+            // {
+            //     search: /Traceback/,
+            //     message: revealText('Error in the Python script.', 'Fehler im Pythonskript.'),
+            //     isError: false
+            // },
+            // {
+            //     search: /Error/,
+            //     message: revealText('Error in Python script', 'Fehler im Pythonskript.'),
+            //     isError: true
+            // },
         ];
         this.outputChannel = vscode.window.createOutputChannel("MicroPython");
         this.outputChannel.show(true);
@@ -144,7 +144,7 @@ export class OutputDataAnalyser {
         this.state = state.filter;
     };
 
-    public setFilterOff(){
+    public setFilterOff() {
         this.filterOn = false;
     }
 
@@ -162,7 +162,7 @@ export class OutputDataAnalyser {
     };
 
     public dataHandler = (data: string) => {
-        //console.log(data);
+        console.log(data);
         if (this.observeDataCondition(data)) {
             this.observedDataFlag = true;
         }
@@ -270,9 +270,12 @@ export class OutputDataAnalyser {
     * @param timeOutMessage String, der zurückgegeben wird, wenn Timeout eintritt.
     * @returns Promise, wird sie erfüllt, werden die gelesenen Daten zurückgegeben, anderfalls die timeOutMessage.
     */
-    public waitForPatern = (patern: RegExp, timeOutafter: number, timeOutMessage: string) => {
-        if (this.timeOutId) { clearTimeout(this.timeOutId); }
-        this.fullFillPromisePattern = patern;
+    public waitForPattern = (pattern: RegExp, timeOutafter: number, timeOutMessage: string) => {
+        // if (this.timeOutId) { 
+        //     clearTimeout(this.timeOutId); 
+        //     this.timeOutId = undefined;
+        // }
+        this.fullFillPromisePattern = pattern;
         return new Promise((resolve, reject) => {
             const callback = (data: string | null) => {
                 if (data) {
@@ -280,7 +283,6 @@ export class OutputDataAnalyser {
                 } else {
                     reject(timeOutMessage);
                 }
-                this.timeOutId = undefined;
             };
             this.fullFillPromise = callback;
             this.timeOutId = setTimeout(() => {
@@ -290,6 +292,22 @@ export class OutputDataAnalyser {
             }, timeOutafter);
         });
     };
+
+    // public waitForPattern = (pattern: RegExp, timeoutAfter: number, timeoutMessage: string) => {
+    //     if (this.timeOutId) {
+    //         clearTimeout(this.timeOutId);
+    //         this.timeOutId = undefined;
+    //     }
+    //     this.fullFillPromisePattern = pattern;
+
+    //     return new Promise<string>((resolve, reject) => {
+    //         this.fullFillPromise = (data: string) => {
+    //             clearTimeout(this.timeOutId!);
+    //             resolve(data);
+    //         };
+    //         this.timeOutId = setTimeout(() => reject(timeoutMessage), timeoutAfter);
+    //     });
+    // };
 
     public hasStateChanged() {
         return new Promise((resolve, reject) => {

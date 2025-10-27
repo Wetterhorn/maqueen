@@ -5,7 +5,7 @@ import { CommandInput } from '../types';
 const commands: Commands = [
     {//Öffnet File im VS Code Editor
         id: 'maqueen.openWorkspace',
-        action: (input: CommandInput)=>() => {
+        action: (input: CommandInput) => () => {
             vscode.commands.executeCommand('vscode.openFolder');
         }
     },
