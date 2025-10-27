@@ -47,14 +47,3 @@ jobs:
 
       - name: Package VSIX (per target)
         run: npx vsce package --target ${{ matrix.platform }}-${{ matrix.arch }}
-
-      # vsce erzeugt standardmäßig: <publisher>.<name>-<version>.vsix
-      # Wir benennen es um auf: <name>-<platform>-<arch>-v<version>.vsix
-      - name: Rename artifact to include name/platform/arch/version
-        run: |
-          node -e "const fs=require('fs');const pkg=require('./package.json');const plat='${{ matrix.platform }}';const arch='${{ matrix.arch }}';const old=(pkg.publisher?`${pkg.publisher}.`:'')+`${pkg.name}-${pkg.version}.vsix`;const neu=`${pkg.name}-${plat}-${arch}-v${pkg.version}.vsix`;if(!fs.existsSync(old)){console.error('VSIX not found:',old);process.exit(1);}fs.renameSync(old,neu);console.log('Renamed:',old,'->',neu);"
-
-      - uses: actions/upload-artifact@v4
-        with:
-          name: ${{ steps.meta.outputs.name }}-${{ matrix.platform }}-${{ matrix.arch }}-v${{ steps.meta.outputs.version }}
-          path: "${{ steps.meta.outputs.name }}-${{ matrix.platform }}-${{ matrix.arch }}-v${{ steps.meta.outputs.version }}.vsix"
