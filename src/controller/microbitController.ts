@@ -12,6 +12,7 @@ import { l10n } from 'vscode';
 import { ErrorType, logError } from '../util/logErrors';
 import { verbose } from '../util/verbose';
 import { once } from 'events';
+import { SerialResponses } from '../util/SerialResponses';
 
 const MICROBIT_VID = "0d28"; // micro:bit / DAPLink (case-insensitive)
 
@@ -36,10 +37,8 @@ export class MicrobitController implements ActionHolder {
 
     private createActionFrame(action: Function, finalAction?: Function) {
         const actionFrame = async (p: any | void) => {
+            if (this.lock) return;
             try {
-                if (this.lock) {
-                    return;
-                }
                 this.lock = true;
                 await action(p);
             } catch (err: any) {
@@ -61,10 +60,22 @@ export class MicrobitController implements ActionHolder {
                 return this.createActionFrame(
                     async () => {
                         //this.analyser.clear();
-                        await this.connectToMicrobit();
-                        this.port!.write(Buffer.from([0x03]));
-                        this.port!.write(Buffer.from([0x03]));
-                        this.port!.write(Buffer.from([0x04]));
+                        const port = await this.connectToMicrobit();
+                        const responses = new SerialResponses(port);
+                        try {
+                            // Arm the response receiver BEFORE sending the control characters.
+                            const ready = responses.waitFor('MPY: soft reboot', 2000);
+                            const sending = new Promise<void>((resolve, reject) => {
+                                // Ctrl-C, Ctrl-B, Ctrl-D: laufendes Programm abr., norm. REPL, Soft Reset
+                                port.write(Buffer.from([0x03, 0x02, 0x04]), error => {
+                                    if (error) reject(error);
+                                    else resolve();
+                                });
+                            });
+                            await Promise.all([ready, sending]);
+                        }finally {
+                            responses.dispose();
+                        }
                     }
                 );
             case 'stop':
@@ -75,8 +86,7 @@ export class MicrobitController implements ActionHolder {
                         // await sleep(2000)
                         // await this.machineReset();
                         // await sleep(2000);
-                        (await this.open()).write(Buffer.from([0x03]));
-                        this.port!.write(Buffer.from([0x03]));
+                        await this.write(Buffer.from([0x03]));
                     }
                 );
             case 'closePort':
@@ -96,9 +106,9 @@ export class MicrobitController implements ActionHolder {
                         this.analyser.clear();
                         this.analyser.setOn(false);
                         await this.connectToMicrobit();
-                        this.port!.write(Buffer.from([0x02]));
+                        await this.write(Buffer.from([0x02]));
                         await sleep(50);
-                        this.port!.write(Buffer.from([0x03]));
+                        await this.write(Buffer.from([0x03]));
                         await sleep(50);
                         await this.checkMicroPython();
                         this.analyser.messageToOuputChannel(l10n.t({ message: 'Uploading {0}...', args: [file.label], comment: ['{0}: file name'] }));
@@ -125,7 +135,7 @@ export class MicrobitController implements ActionHolder {
                         this.analyser.setOn(true);
                         this.analyser.setUserMessages(true);
                         await this.connectToMicrobit();
-                        this.port!.write(Buffer.from([0x01]));
+                        await this.write(Buffer.from([0x01]));
                         await sleep(200);
                         this.analyser.setFilter();
                     }
@@ -136,7 +146,7 @@ export class MicrobitController implements ActionHolder {
                         this.analyser.setOn(true);
                         this.analyser.setUserMessages(true);
                         await this.connectToMicrobit();
-                        this.port!.write(Buffer.from([0x02]));
+                        await this.write(Buffer.from([0x02]));
                         await sleep(200);
                         this.analyser.setFilter();
                     }
@@ -147,7 +157,7 @@ export class MicrobitController implements ActionHolder {
                         this.analyser.setOn(true);
                         this.analyser.setUserMessages(true);
                         await this.connectToMicrobit();
-                        this.port!.write(Buffer.from([0x03]));
+                        await this.write(Buffer.from([0x03]));
                         await sleep(200);
                         this.analyser.setFilter();
                     }
@@ -158,7 +168,7 @@ export class MicrobitController implements ActionHolder {
                         this.analyser.setOn(true);
                         this.analyser.setUserMessages(true);
                         await this.connectToMicrobit();
-                        this.port!.write(Buffer.from([0x04]));
+                        await this.write(Buffer.from([0x04]));
                         await sleep(200);
                         this.analyser.setFilter();
                     }
@@ -169,7 +179,7 @@ export class MicrobitController implements ActionHolder {
                         this.analyser.setOn(true);
                         this.analyser.setUserMessages(true);
                         await this.connectToMicrobit();
-                        this.port!.write(Buffer.from([0x04]));
+                        await this.write(Buffer.from([0x05]));
                         await sleep(200);
                         this.analyser.setFilter();
                     }
@@ -233,61 +243,102 @@ export class MicrobitController implements ActionHolder {
 
     private openPort = async (port: SerialPort): Promise<void> => {
 
-    try {
-        port.open();                     // startet asynchron
-        await Promise.race([
-            once(port, 'open'),           // Erfolg
-            once(port, 'error')           // Fehler direkt abfangen
-        ]);
-        await new Promise<void>(resolve =>
-            port.set({ dtr: true, rts: true }, () => resolve())
-        );
-        // optional: kurzes Delay für ARM-Treiber
-        await new Promise(r => setTimeout(r, 200));
-    } catch (err) {
-        logError(ErrorType.CONNECTION, "openPort", err);
-        throw err;
-    }
-};
+        try {
+            port.open();                     // startet asynchron
+            await Promise.race([
+                once(port, 'open'),           // Erfolg
+                once(port, 'error')           // Fehler direkt abfangen
+            ]);
+            await new Promise<void>(resolve =>
+                port.set({ dtr: true, rts: true }, () => resolve())
+            );
+            // optional: kurzes Delay für ARM-Treiber
+            await new Promise(r => setTimeout(r, 200));
+        } catch (err) {
+            logError(ErrorType.CONNECTION, "openPort", err);
+            throw err;
+        }
+    };
 
-    // private openPort(port: SerialPort) {
-    //     return new Promise<void>((resolve, reject) => {
-    //         port.open((err) => {
-    //             if (err) {
-    //                 logError(ErrorType.CONNECTION, "openPort", err);
-    //                 reject(err);
-    //             } else {
-    //                 resolve();
-    //             }
-    //         });
-    //     });
-    // }
-    
-    private open = async () : Promise<SerialPort> => {
-        if(this.port?.isOpen) return this.port;
-        if(this.port){
-            try{
+
+
+    private async write(message: string | Buffer): Promise<void> {
+        let port: SerialPort;
+
+        try {
+            port = await this.open();
+        } catch (err: unknown) {
+            throw forwardError(
+                err,
+                err instanceof Error ? err.message : String(err),
+                errorType.noPort,
+                316
+            );
+        }
+
+        await new Promise<void>((resolve, reject) => {
+            port.write(message, err => {
+                if (err) {
+                    reject(forwardError(err, err instanceof Error ? err.message : String(err), errorType.serialWrite, 324));
+                    return;
+                }
+                resolve();
+            });
+        });
+    }
+
+    private open = async (): Promise<SerialPort> => {
+        const stalePort = this.port;
+
+        if (stalePort?.destroyed) {
+            // Einen bereits laufenden Schließvorgang abwarten.
+            if (stalePort.closing) {
+                await once(stalePort, 'close', {
+                    signal: AbortSignal.timeout(3000)
+                });
+            }
+
+            // Falls die native Verbindung noch offen ist: freigeben.
+            if (stalePort.isOpen) {
+                await new Promise<void>((resolve, reject) => {
+                    stalePort.close(err => {
+                        if (err) {
+                            reject(err);
+                        } else {
+                            resolve();
+                        }
+                    });
+                });
+            }
+
+            stalePort.unpipe();
+            this.port = undefined;
+            this.parserRegistered = false;
+        }
+        if (this.port?.isOpen) return this.port;
+        if (this.port) {
+            try {
                 await this.openPort(this.port);
                 return this.port;
-            } catch(err) {
+            } catch (err) {
                 logError(ErrorType.CONNECTION, "try open port", err);
-                try { this.port.removeAllListeners(); this.port.destroy(); } catch {}
+                try { this.port.removeAllListeners(); this.port.destroy(); } catch { }
                 this.port = undefined;
             }
         }
-            //port konnte nicht geöffnet werden oder es existiert noch keiner.
-            this.parserRegistered = false;
-            try {
-                const portPath = await this.lookForMicrobit();
-                const p = new SerialPort({ path: portPath, baudRate: this.BAUD_RATE, autoOpen: false });
-                this.port = p;
-                await this.openPort(p);
-                //p.on("error", (err)=>{logError(ErrorType.CONNECTION, "portError", err);})
-                return p;
-            } catch(err){
-                logError(ErrorType.CONNECTION, "failed to find or open a port", err);
-                throw new CustomError('No serial port could be opened.', errorType.noPort, 315);
-            }
+        //port konnte nicht geöffnet werden oder es existiert noch keiner.
+        this.parserRegistered = false;
+        try {
+            const portPath = await this.lookForMicrobit();
+            const p = new SerialPort({ path: portPath, baudRate: this.BAUD_RATE, autoOpen: false });
+            this.port = p;
+            await this.openPort(p);
+            //p.on("error", (err)=>{logError(ErrorType.CONNECTION, "portError", err);})
+            return p;
+        } catch (err) {
+            logError(ErrorType.CONNECTION, "failed to find or open a port", err);
+            throw new CustomError('No serial port could be opened.', errorType.noPort, 315);
+        }
     }
 
     private async close() {
@@ -535,7 +586,7 @@ export class MicrobitController implements ActionHolder {
         await this.execute(commands, false, true);
     }
 
-     async machineReset() {
+    async machineReset() {
         const commands = [
             'import machine',
             'machine.reset()'
@@ -601,18 +652,18 @@ export class MicrobitController implements ActionHolder {
             let softReboot = false;
             const p = vscode.Uri.file(file.path).fsPath;
             if (!p) { throw new Exception('file.path in the uploadFile command does not exist.', 309); }
-            
+
             let fileName = file.label;
-            try{
+            try {
                 const root = getRootPath(this.context);
                 if (p.startsWith(path.join(root, 'src', 'main') + path.sep)) {//main-File
                     fileName = 'main.py';
                     softReboot = true;
                 }
-            } catch(err){
+            } catch (err) {
                 //no root
             }
-            
+
             await this.connectToMicrobit();
             this.analyser.setUserMessages(false);
             await this.put(p, fileName, softReboot);

@@ -58,7 +58,7 @@ export class ErrorLogger {
         }
         fullMessage += "\n\n";
 
-        //fs.appendFileSync(this.errorLogPath!, fullMessage, { encoding: "utf8" });
+        fs.appendFileSync(this.errorLogPath!, fullMessage, { encoding: "utf8" });
         verbose(`Errorlog: ${fullMessage}`);
     }
 

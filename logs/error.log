@@ -1,54 +1,182 @@
-[2025-11-11T08:16:29.392Z] [ConnectionError] failed to find or open a port
-CustomError: No microbit was recognised.
-    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:224:24
+[2026-10-28T12:58:29.961Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 2000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
 
-[2025-11-11T08:16:29.395Z] [UserAction] actionFrame
-CustomError: No serial port could be opened.
-    at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:265:23)
-    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:284:27
+[2026-10-28T13:00:13.945Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 2000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
 
-[2025-11-11T08:16:51.712Z] [ConnectionError] failed to find or open a port
-CustomError: No microbit was recognised.
-    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:224:24
+[2026-10-28T13:00:37.972Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 2000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
 
-[2025-11-11T08:16:51.714Z] [UserAction] actionFrame
-CustomError: No serial port could be opened.
-    at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:265:23)
-    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:284:27
+[2026-10-28T13:00:45.373Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 2000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
 
-[2025-11-11T08:19:31.198Z] [ConnectionError] failed to find or open a port
-CustomError: No microbit was recognised.
-    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:224:24
+[2026-10-28T13:01:24.717Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 2000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
 
-[2025-11-11T08:19:31.201Z] [UserAction] actionFrame
-CustomError: No serial port could be opened.
-    at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:265:23)
-    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:284:27
+[2026-10-28T13:04:46.205Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 2000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
 
-[2025-11-11T08:23:24.428Z] [ConnectionError] failed to find or open a port
-CustomError: No microbit was recognised.[]
-    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:224:24
+[2026-10-28T13:11:01.261Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 2000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
 
-[2025-11-11T08:23:24.433Z] [UserAction] actionFrame
-CustomError: No serial port could be opened.
-    at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:265:23)
-    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:284:27
+[2026-10-28T13:13:04.459Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 2000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
 
-[2025-11-12T21:34:40.355Z] [ConnectionError] failed to find or open a port
-CustomError: No microbit was recognised.[]
-    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:224:24
+[2026-10-28T13:17:01.895Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 2000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
 
-[2025-11-12T21:34:40.356Z] [UserAction] actionFrame
-CustomError: No serial port could be opened.
-    at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:265:23)
-    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:284:27
+[2026-10-28T13:18:34.302Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 2000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
 
-[2025-11-12T21:35:17.496Z] [ConnectionError] failed to find or open a port
-CustomError: No microbit was recognised.[]
-    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:224:24
+[2026-10-28T13:19:09.666Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 2000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
 
-[2025-11-12T21:35:17.498Z] [UserAction] actionFrame
-CustomError: No serial port could be opened.
-    at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:265:23)
-    at /Users/davideichenberger/Documents/GitHub/maqueen/src/controller/microbitController.ts:284:27
+[2026-10-28T13:23:36.277Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 2000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-28T13:24:50.987Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 2000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-28T13:26:21.685Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 2000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-28T13:27:26.923Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 2000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-28T13:31:39.060Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 2000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T13:27:20.652Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 2000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T13:35:41.918Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 2000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T13:37:05.075Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 2000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T13:42:38.169Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 2000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T13:49:02.619Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 2000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T13:49:13.722Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 2000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T13:49:33.067Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 2000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T13:49:40.209Z] [ExecuteError] execute
+"timeoutAfterRaw"
+
+[2026-10-29T13:49:40.211Z] [UserAction] actionFrame
+CustomError: timeoutAfterRaw
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:518:53
+
+[2026-10-29T13:49:45.161Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 2000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T13:51:53.193Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 2000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T15:17:26.131Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 2000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T15:18:42.461Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 2000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T15:22:52.538Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 2000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T15:24:10.498Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 2000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
 

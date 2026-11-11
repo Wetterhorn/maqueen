@@ -44,6 +44,7 @@ export enum errorType {
     noMicrobit, // Kein micro:bit gefunden
     moreThanOneMicrobit, // mehr als ein micro:bit gefunden
     noPort, // Es konnte kein Port geöffnet werden.
+    serialWrite, //Es gab ein Problem bei port.write()
     fileUpload, //Fehler beim Laden eines Files auf den micro:bit.
     commandExecution, //Fehler bei der Ausführung von Befehlen, die auf micro:bit übertragen werden.
     rawOn, //Fehler beim Überführen des micro:bits in den rawOn-Modus.
@@ -85,6 +86,7 @@ export async function error2user(error: VerboseError){
                 advice = l10n.t('You have more than one micro:bit connected to your laptop. Remove one.');
                 break;
             case errorType.noPort:
+            case errorType.serialWrite:
                 advice = l10n.t('No connection can be established with the Micro:bit. Check that it is correctly connected to your laptop with a USB cable.');
                 break;
             case errorType.fileUpload:

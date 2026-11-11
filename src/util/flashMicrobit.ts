@@ -36,7 +36,7 @@ function getMicrobitDrives() {
             });
         } else if (os.platform() === 'win32') {
             // Windows - Laufwerksbuchstaben abrufen
-            exec('Get-CimInstance Win32_LogicalDisk | Select DeviceID, VolumeName | ConvertTo-Json', (error, stdout, stderr) => {
+            exec('powershell.exe -NoProfile -Command "Get-CimInstance Win32_LogicalDisk | Select-Object DeviceID, VolumeName | ConvertTo-Json"', (error, stdout, stderr) => {
                 if (error) {
                     reject(new Exception(`Error when retrieving the volumes: ${stderr}`, 318));
                 } else {

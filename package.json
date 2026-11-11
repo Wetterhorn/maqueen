@@ -10,7 +10,7 @@
     "Libraries/extern/gitHub",
     "Libraries/extern/local"
   ],
-  "version": "0.0.20",
+  "version": "0.0.23",
   "icon": "resources/extensionIcon.png",
   "repository": {
     "type": "git",
