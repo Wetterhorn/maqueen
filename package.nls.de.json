@@ -18,6 +18,7 @@
     "viewsWelcome.welcome1": "Der geöffnete Ordner enthält kein (vollständiges) Micro:bit-Projekt. Erstelle im geöffneten Ordner ein Micro:bit-Projekt oder wähle einen anderen Ordner. \n[Micro:bit-Projekt erstellen](command:maqueen.createProject)\n[Anderen Ordner öffnen](command:maqueen.openWorkspace)",
     "viewsWelcome.welcome2": "Öffne einen Ordner, um ein bestehendes Micro:bit-Projekt weiterzuführen oder ein neues zu erstellen.\n[Ordner öffnen](command:maqueen.openWorkspace)",
     "viewsWelcome.welcome3": "Analysiere Workspace...",
+    "viewsWelcome.repairProject": "Die Projektstruktur ist unvollständig oder wurde verändert.\n[Dateistruktur wiederherstellen](command:maqueen.createProject)",
     "command.enableLib": "Aktiviere Modul",
     "command.disableLib": "Deaktiviere Modul",
     "command.deleteExtLib": "Lösche von Erweiterung",

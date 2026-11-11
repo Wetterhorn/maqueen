@@ -13,6 +13,8 @@ import { ErrorType, logError } from '../util/logErrors';
 import { verbose } from '../util/verbose';
 import { once } from 'events';
 import { SerialResponses } from '../util/SerialResponses';
+import { rawPaste } from '../util/rawPaste';
+import { writeFileRawPaste } from '../util/writeFileRawPaste';
 
 const MICROBIT_VID = "0d28"; // micro:bit / DAPLink (case-insensitive)
 
@@ -62,18 +64,14 @@ export class MicrobitController implements ActionHolder {
                         //this.analyser.clear();
                         const port = await this.connectToMicrobit();
                         const responses = new SerialResponses(port);
+
                         try {
-                            // Arm the response receiver BEFORE sending the control characters.
-                            const ready = responses.waitFor('MPY: soft reboot', 2000);
-                            const sending = new Promise<void>((resolve, reject) => {
-                                // Ctrl-C, Ctrl-B, Ctrl-D: laufendes Programm abr., norm. REPL, Soft Reset
-                                port.write(Buffer.from([0x03, 0x02, 0x04]), error => {
-                                    if (error) reject(error);
-                                    else resolve();
-                                });
-                            });
-                            await Promise.all([ready, sending]);
-                        }finally {
+                            // 1. Programm unterbrechen und normalen REPL bestätigen.
+                            await this.exchange(port, responses, '>>>', [0x03, 0x02]);
+
+                            // 2. Erst jetzt den Soft-Reboot auslösen.
+                            await this.exchange(port, responses, 'MPY: soft reboot', [0x04]);
+                        } finally {
                             responses.dispose();
                         }
                     }
@@ -81,12 +79,15 @@ export class MicrobitController implements ActionHolder {
             case 'stop':
                 return this.createActionFrame(
                     async () => {
-                        vscode.commands.executeCommand('setContext', 'maqueen.fileUploadRunning', false);
-                        // await this.connectToMicrobit();
-                        // await sleep(2000)
-                        // await this.machineReset();
-                        // await sleep(2000);
-                        await this.write(Buffer.from([0x03]));
+                        //this.analyser.clear();
+                        const port = await this.connectToMicrobit();
+                        const responses = new SerialResponses(port);
+
+                        try {
+                            await this.exchange(port, responses, '>>>', [0x03]);
+                        } finally {
+                            responses.dispose();
+                        }
                     }
                 );
             case 'closePort':
@@ -105,12 +106,12 @@ export class MicrobitController implements ActionHolder {
                         doc.save();
                         this.analyser.clear();
                         this.analyser.setOn(false);
+                        const port = await this.connectToMicrobit();
+                        const responses = new SerialResponses(port);
+                        try { await this.exchange(port, responses, '>>>', [0x03, 0x02]); }
+                        finally { responses.dispose(); }
                         await this.connectToMicrobit();
-                        await this.write(Buffer.from([0x02]));
-                        await sleep(50);
-                        await this.write(Buffer.from([0x03]));
-                        await sleep(50);
-                        await this.checkMicroPython();
+                        //await this.checkMicroPython();
                         this.analyser.messageToOuputChannel(l10n.t({ message: 'Uploading {0}...', args: [file.label], comment: ['{0}: file name'] }));
                         await this.fileUpload(file);
                     },
@@ -135,6 +136,12 @@ export class MicrobitController implements ActionHolder {
                         this.analyser.setOn(true);
                         this.analyser.setUserMessages(true);
                         await this.connectToMicrobit();
+                        await this.write(Buffer.from([0x01]));
+                        await sleep(200);
+                        await this.write(Buffer.from([0x05]));
+                        await sleep(200);
+                        await this.write("A");
+                        await sleep(200);
                         await this.write(Buffer.from([0x01]));
                         await sleep(200);
                         this.analyser.setFilter();
@@ -168,7 +175,13 @@ export class MicrobitController implements ActionHolder {
                         this.analyser.setOn(true);
                         this.analyser.setUserMessages(true);
                         await this.connectToMicrobit();
-                        await this.write(Buffer.from([0x04]));
+                        await this.write(Buffer.from([0x05]));
+                        await sleep(200);
+                        await this.write("A");
+                        await sleep(200);
+                        await this.write(Buffer.from([0x01]));
+                        await sleep(200);
+                        //await this.write(Buffer.from([0x04]));
                         await sleep(200);
                         this.analyser.setFilter();
                     }
@@ -287,6 +300,29 @@ export class MicrobitController implements ActionHolder {
         });
     }
 
+    private exchange = async (
+        port: SerialPort,
+        responses: SerialResponses,
+        expected: string,
+        bytes: number[]
+    ): Promise<void> => {
+        const response = responses.waitFor(expected, 5000, expected);
+
+        const sending = new Promise<void>((resolve, reject) => {
+            port.write(Buffer.from(bytes), error => {
+                if (error) reject(error);
+                else resolve();
+            });
+        });
+
+        const [received] = await Promise.all([response, sending]);
+
+        console.log(
+            'Antwort bestätigt:',
+            JSON.stringify(received.toString('utf8'))
+        );
+    };
+
     private open = async (): Promise<SerialPort> => {
         const stalePort = this.port;
 
@@ -353,20 +389,33 @@ export class MicrobitController implements ActionHolder {
         }
     }
 
-    private connectToMicrobit(): Promise<SerialPort> {
-        return new Promise(async (resolve, reject) => {
-            try {
-                const r = await this.open();
-                if (!this.parserRegistered) {
-                    const parser = r.pipe(new ReadlineParser({ delimiter: '\r\n' }));
-                    parser.on('data', d => this.analyser.dataHandler(d));
-                    this.parserRegistered = true;
-                }
-                resolve(r);
-            } catch (err: any) {
-                reject(forwardError(err, err.message, errorType.noPort, 316));
+    private async connectToMicrobit(): Promise<SerialPort> {
+        try {
+            const port = await this.open();
+
+            if (!this.parserRegistered) {
+                const parser = new ReadlineParser({
+                    delimiter: '\r\n'
+                });
+
+                // Listener vor dem Anschließen des Streams registrieren.
+                parser.on('data', line => {
+                    this.analyser.dataHandler(line);
+                });
+
+                port.pipe(parser);
+                this.parserRegistered = true;
             }
-        });
+
+            return port;
+        } catch (err: unknown) {
+            throw forwardError(
+                err,
+                err instanceof Error ? err.message : String(err),
+                errorType.noPort,
+                316
+            );
+        }
     }
     async checkMicroPython() {
         try {
@@ -377,8 +426,54 @@ export class MicrobitController implements ActionHolder {
     }
 
 
-    //Sendet ein File (filePath) und lädt es unter dem Namen target auf den micro:bit
     async put(filePath: string, target: string, softReboot: boolean = false): Promise<void> {
+        const port = await this.connectToMicrobit();
+        try {
+            const data = (await vscode.workspace.fs.readFile(vscode.Uri.file(filePath)));
+            const code = Buffer.from(data);
+            await writeFileRawPaste(
+                port,
+                target,
+                Buffer.from(code),
+                {
+                    blockBytes: 256,
+                    trace: (direction, bytes) => {
+                        console.log(direction, bytes.toString('hex'));
+                    }
+                }
+            );
+
+
+
+            // if (stderr.length > 0) {
+            //     throw new Error(stderr.toString('utf8'));
+            // }
+            this.analyser.messageToOuputChannel(l10n.t({ message: '{0} was successfully uploaded.', args: [path.basename(filePath)], comment: ['{0}: file name'] }));
+
+            if (softReboot) {
+                const port = await this.connectToMicrobit();
+                const responses = new SerialResponses(port);
+
+                try {
+                    // 1. Programm unterbrechen und normalen REPL bestätigen.
+                    await this.exchange(port, responses, '>>>', [0x03, 0x02]);
+
+                    // 2. Erst jetzt den Soft-Reboot auslösen.
+                    await this.exchange(port, responses, 'MPY: soft reboot', [0x04]);
+                } finally {
+                    responses.dispose();
+                }
+            }
+        }
+
+        //return stdout.toString('utf8');
+        catch (err: any) {
+            throw forwardError(err, getErrorMessage(err, false), errorType.fileUpload, 308);
+        }
+    }
+
+    //Sendet ein File (filePath) und lädt es unter dem Namen target auf den micro:bit
+    async put2(filePath: string, target: string, softReboot: boolean = false): Promise<void> {
         return new Promise(async (resolve, reject) => {
             //OutputDataAnalyser.getInstance().setOffUntilPattern(RegExp(`^MPY: soft reboot`));
             try {
@@ -397,29 +492,39 @@ export class MicrobitController implements ActionHolder {
 
                 this.toggle = !this.toggle;
                 //const fileUri = vscode.Uri.file(`${filePath}${this.toggle ? 'x' : ''}`);
-                const fileUri = vscode.Uri.file(filePath);
-                let data = (await vscode.workspace.fs.readFile(fileUri)).toString();
-
+                // const fileUri = vscode.Uri.file(filePath);
+                // let data = (await vscode.workspace.fs.readFile(fileUri)).toString();
+                const data = (await vscode.workspace.fs.readFile(vscode.Uri.file(filePath)));
+                const bytes = Buffer.from(data);
                 commands = [
-                    { command: `import gc`, function: () => { sleep(5); } },
-                    { command: `fd = open("${target}", "wb")`, function: () => { sleep(5); } },
-                    { command: 'f = fd.write', function: () => { sleep(5); } },
+                    { command: `import gc`, function: async () => await this.analyser.waitForPattern(/>>>/, 5000, `timeout: import gc`) },
+                    { command: `gc.collect()`, function: async () => await this.analyser.waitForPattern(/>>>/, 5000, `timeout: gc.collect()`) },
+                    // { command: `print("MEM", gc.mem_free())`, function: async () => await this.analyser.waitForPattern(/>>>/,5000,`timeout:print mem`) },
+                    { command: `fd = open("${target}", "wb")`, function: () => sleep(50) },
+                    { command: 'f = fd.write', function: async () => await this.analyser.waitForPattern(/>>>/, 5000, `timeout: write-`) },
                     // {
                     //     command: "f(\"tsbewegung\\r\\n    - fährt solange vorwärts, bis ein ande\")",
                     //     function: async () => await this.analyser.waitForPatern(/^[1-9][0-9]/, 5000, 'timeOut'),
                     //   }
                 ];
-                data = data.replace(/#.*/gm, '');
+                // data = data.replace(/#.*/gm, '');
+
                 //data = data.replace(/ä/, '\\xc3\\xa4').replace(/ö/, '\\xc3\\xb6').replace(/ü/, '\\xc3\\xbc').replace(/Ä/, '\\xc3\\x84').replace(/Ö/, '\\xc3\\x96').replace(/Ü/, '\\xc3\\x9C');
                 const bd = Buffer.from(data);
-                for (let i = 0; i < data.length; i = i + 54) {
-                    //commands.push({ command: 'f(b' + JSON.stringify(data.substring(i, i + 54)) + ')', function: async () => await this.analyser.waitForPatern(/^[1-9][0-9]/, 5000, 'timeOut') });
-                    commands.push({ command: 'f(b' + JSON.stringify(bd.subarray(i, i + 54).toString().replace(/ä/g, '\\xc3\\xa4').replace(/ö/g, '\\xc3\\xb6').replace(/ü/g, '\\xc3\\xbc').replace(/Ä/g, '\\xc3\\x84').replace(/Ö/g, '\\xc3\\x96').replace(/Ü/g, '\\xc3\\x9C')) + ')', function: async () => await this.analyser.waitForPattern(/^[1-9][0-9]*/, 5000, 'timeOut') });
-                    if (i % 10 === 0) {
-                        commands.push({ command: 'print("s",gc.mem_free())', function: async () => await this.analyser.waitForPattern(/^s [0-9]+/, 5000, 'timeOut') });
-                    }
+                for (let i = 0; i < bytes.length; i += 54) {
+                    const chunk = bytes.subarray(i, i + 54);
+                    const byteValues = Array.from(chunk).join(',');
+                    commands.push({
+                        command: `f(bytes([${byteValues}]))`,
+                        function: async () =>
+                            await this.analyser.waitForPattern(
+                                /^[1-9][0-9]*/,
+                                5000,
+                                `timeout: ${i}`
+                            )
+                    });
                 }
-                commands.push({ command: "fd.close()", function: async () => await this.analyser.waitForPattern(/^>>> fd.close\(\)$/, 5000, 'timeOut') });
+                commands.push({ command: "fd.close()", function: async () => await this.analyser.waitForPattern(/^>>> fd.close\(\)$/, 5000, 'timeOut: fd.close()') });
 
                 await this.execute(commands, softReboot, false, l10n.t({ message: '{0} was successfully uploaded.', args: [path.basename(filePath)], comment: ['{0}: file name'] }));
                 resolve();
@@ -437,99 +542,137 @@ export class MicrobitController implements ActionHolder {
      */
     private async execute(commands: string[] | { command: string, function: Function }[], enterLast: boolean = false, raw: boolean = true, message?: string): Promise<void> {
         //this.analyser.setOn(true);
-        return new Promise(async (resolve, reject) => {
-            try {
-                const p = await this.open();
-                p.write(Buffer.from([0x03]));
-                if (raw) {
-                    await this.raw_on();
-                }
-                let memmoryOverflow = false;
-                for (let command of commands) {
-                    const com = typeof command === 'string' ? command + '\r' : command.command + '\r';
-                    const commandBuffer = Buffer.from(com, 'utf-8');
-                    let count = 0;
-                    (await this.open()).write(commandBuffer, (err) => {
-                        if (err) {
-                            logError(ErrorType.EXECUTE, "writeCommand", err);
-                        }
+        let responses = undefined;
+        try {
+            const port = await this.connectToMicrobit();
+            responses = new SerialResponses(port);
+            // 1. Programm unterbrechen und normalen REPL bestätigen.
+            await this.exchange(port, responses, '>>>', [0x03, 0x02]);
+            if (raw) {
+                await this.raw_on();
+            }
+            let memmoryOverflow = false;
+            for (let command of commands) {
+                const com = typeof command === 'string' ? command + '\r' : command.command + '\r';
+                const commandBuffer = Buffer.from(com, 'utf-8');
+                let count = 0;
+                const send = new Promise<void>((resolve, reject) => {
+                    port.write(commandBuffer, error => {
+                        if (error) reject(error);
+                        else resolve();
                     });
-                    // for (let i = 0; i < com.length; i = i + 32) {
-                    //     (await this.open()).write(commandBuffer.subarray(i, i + 32),(err) => {
-                    //         if (err) {
-                    //           return console.log('Fehler beim Schreiben: ', err.message);
-                    //         }
-                    //         console.log('Nachricht gesendet:');
-                    //       });
-                    //     //await sleep(1);
-                    //     count++;
-                    // }
-                    if (this.analyser.getObserveDataFlag()) {
-                        memmoryOverflow = true;
-                        break;
-                    }
-                    if (!enterLast && raw) {//nur im row Mode, sonst softreboot.
-                        //(await this.open()).write(Buffer.from([0x04]));
-                    }
-                    //console.log(await command.do());
+                });
+                // for (let i = 0; i < com.length; i = i + 32) {
+                //     (await this.open()).write(commandBuffer.subarray(i, i + 32),(err) => {
+                //         if (err) {
+                //           return console.log('Fehler beim Schreiben: ', err.message);
+                //         }
+                //         console.log('Nachricht gesendet:');
+                //       });
+                //     //await sleep(1);
+                //     count++;
+                // }
+                if (this.analyser.getObserveDataFlag()) {
+                    memmoryOverflow = true;
+                    break;
+                }
+                if (!enterLast && raw) {//nur im row Mode, sonst softreboot.
+                    //(await this.open()).write(Buffer.from([0x04]));
+                }
+                //console.log(await command.do());
+                const waiting = new Promise((resolve, reject) => {
                     if (typeof command !== 'string') {
                         try {
-                            const r = await command.function();
+                            resolve(command.function());
                             //await sleep(1000);
                         } catch (err) {
                             logError(ErrorType.EXECUTE, "executeCommand", err);
-                            throw new CustomError('In the execute function, a function linked to a command could not be executed. Error: ' + getErrorMessage(err, true), errorType.fileUpload, 305);
+                            reject(new CustomError('In the execute function, a function linked to a command could not be executed. Error: ' + getErrorMessage(err, true), errorType.fileUpload, 305));
                         }
                     } else {
-                        await sleep(10);
+                        resolve(sleep(10));
                     }
-                }
-                if (memmoryOverflow) {
-                    throw new CustomError('File was too large for the available memory.', errorType.memmory, 314);
-                }
-                if (message) {
-                    this.analyser.messageToOuputChannel(message);
-                }
-                if (enterLast) { this.analyser.setUserMessages(true); }
-                if (enterLast || raw) {//Befehle ausführen.
-                    (await this.open()).write(Buffer.from([0x04]));
-                    if (enterLast) {
-                        this.analyser.setFilter();
-                        this.analyser.setFilterOff();
-                    }
-                    await sleep(10);
-                }
-                if (raw) {//raw mode verlassen
-                    (await this.open()).write(Buffer.from([0x02]));
-                    await this.analyser.waitForPattern(/^Type/, 1000, 'timeoutAfterRaw');
-                }
-                resolve();
-            } catch (err: any) {
-                logError(ErrorType.EXECUTE, "execute", err);
-                reject(forwardError(err, getErrorMessage(err, false), errorType.fileUpload, 306));
+
+                });
+                await Promise.all([waiting, send]);
+
+                // if (typeof command !== 'string') {
+                //     try {
+                //         const r = await command.function();
+                //         //await sleep(1000);
+                //     } catch (err) {
+                //         logError(ErrorType.EXECUTE, "executeCommand", err);
+                //         throw new CustomError('In the execute function, a function linked to a command could not be executed. Error: ' + getErrorMessage(err, true), errorType.fileUpload, 305);
+                //     }
+                // } else {
+                //     await sleep(10);
+                // }
             }
-        });
+            if (memmoryOverflow) {
+                throw new CustomError('File was too large for the available memory.', errorType.memmory, 314);
+            }
+            if (message) {
+                this.analyser.messageToOuputChannel(message);
+            }
+            if (enterLast) { this.analyser.setUserMessages(true); }
+            if (enterLast || raw) {//Befehle ausführen.
+                await this.write(Buffer.from([0x04]));
+                if (enterLast) {
+                    this.analyser.setFilter();
+                    this.analyser.setFilterOff();
+                }
+                await sleep(10);
+            }
+            if (raw) {
+                await Promise.all([
+                    this.analyser.waitForPattern(
+                        /^Type/,
+                        1000,
+                        'timeoutAfterRaw'
+                    ),
+                    this.write(Buffer.from([0x02]))
+                ]);
+            }
+            return;
+        } catch (err: any) {
+            logError(ErrorType.EXECUTE, "execute", err);
+            throw (forwardError(err, getErrorMessage(err, false), errorType.fileUpload, 306));
+        }
+        finally {
+            responses?.dispose();
+        }
     }
 
     //Funktion geht davon aus, dass der Port geöffnet ist, ansonsten wird ein Error geworfen
     private async raw_on(): Promise<void> {
-        const rawReplMsg = 'raw REPL; CTRL-B to exit\r\n>';
+        const rawReplMsg = 'raw REPL; CTRL-B to exit';
         return new Promise(async (resolve, reject) => {
+            let responses = undefined;
             try {
-                const port = await this.open();
-                //Send CTRL-C three times between pauses to break out of loop.
-                for (let i = 0; i < 3; i++) {
-                    // await this.port.write(Buffer.from('\r\x03', 'utf-8'));
-                    port.write(Buffer.from([0x03]));
-                    await sleep(10);
-                }
-                await port.write(Buffer.from('\r\x01', 'utf-8'));
-                await sleep(10);
-                await port.write(Buffer.from([0x04]));
-                await sleep(10);
+                const port = await this.connectToMicrobit();
+                responses = new SerialResponses(port);
+                // 1. Programm unterbrechen und normalen REPL bestätigen.
+                await this.exchange(port, responses, '>>>', [0x03, 0x03, 0x03]);
+
+                // //Send CTRL-C three times between pauses to break out of loop.
+                // for (let i = 0; i < 3; i++) {
+                //     // await this.port.write(Buffer.from('\r\x03', 'utf-8'));
+                //     port.write(Buffer.from([0x03]));
+                //     await sleep(10);
+                // }
+                await this.exchange(port, responses, rawReplMsg, [0x01]);
+                await this.exchange(port, responses, '>OK', [0x04]);
+
+                // await port.write(Buffer.from('\r\x01', 'utf-8'));
+                // await sleep(10);
+                // await port.write(Buffer.from([0x04]));
+                // await sleep(10);
                 resolve();
             } catch (err: any) {
                 reject(forwardError(err, getErrorMessage(err, false), errorType.rawOn, 307));
+            }
+            finally {
+                responses?.dispose();
             }
         });
     }

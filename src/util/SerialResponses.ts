@@ -22,7 +22,7 @@ export class SerialResponses {
         port.on('close', this.onClose);
     }
 
-    waitFor(token: string | Buffer, timeoutMs = 2000): Promise<Buffer> {
+    waitFor(token: string | Buffer, timeoutMs = 2000, message=`Antwort-Timeout nach ${timeoutMs} ms.`): Promise<Buffer> {
         if (this.failure) return Promise.reject(this.failure);
         if (this.pending) return Promise.reject(new Error('Es läuft bereits eine Antwortanfrage.'));
         if (!this.port.isOpen || this.port.destroyed) {
@@ -35,7 +35,7 @@ export class SerialResponses {
 
         return new Promise<Buffer>((resolve, reject) => {
             const timer = setTimeout(() => {
-                this.fail(new Error(`Antwort-Timeout nach ${timeoutMs} ms.`));
+                this.fail(new Error(message));
             }, timeoutMs);
             this.pending = { token: bytes, resolve, reject, timer };
             this.check();
@@ -43,7 +43,6 @@ export class SerialResponses {
     }
 
     private readonly onData = (chunk: Buffer): void => {
-        console.log({chunk: chunk.toString()});
         if (this.failure) return;
         if (this.buffer.length + chunk.length > this.maxBytes) {
             this.fail(new Error('Antwortpuffer ist zu groß.'));

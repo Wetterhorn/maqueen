@@ -180,3 +180,1038 @@ Error: Antwort-Timeout nach 2000 ms.
 	at listOnTimeout (node:internal/timers:685:17)
 	at process.processTimers (node:internal/timers:618:7)
 
+[2026-10-29T16:10:28.651Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 5000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T16:10:45.483Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 5000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T16:10:55.834Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 5000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T16:11:32.287Z] [ExecuteError] executeCommand
+"timeOut"
+
+[2026-10-29T16:11:32.290Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOut
+	at /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:498:35
+
+[2026-10-29T16:11:32.291Z] [UserAction] actionFrame
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOut
+	at /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:498:35
+
+[2026-10-29T16:12:11.617Z] [ExecuteError] executeCommand
+"timeOut"
+
+[2026-10-29T16:12:11.620Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOut
+	at /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:498:35
+
+[2026-10-29T16:12:11.621Z] [UserAction] actionFrame
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOut
+	at /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:498:35
+
+[2026-10-29T16:12:20.129Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 5000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T16:12:25.511Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 5000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T16:12:33.953Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 5000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T16:12:50.386Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 5000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T16:13:37.079Z] [ExecuteError] executeCommand
+"timeOut"
+
+[2026-10-29T16:13:37.079Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOut
+	at /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:498:35
+
+[2026-10-29T16:13:37.080Z] [UserAction] actionFrame
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOut
+	at /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:498:35
+
+[2026-10-29T16:13:46.156Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 5000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T16:14:20.585Z] [ExecuteError] executeCommand
+"timeOut"
+
+[2026-10-29T16:14:20.586Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOut
+	at /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:498:35
+
+[2026-10-29T16:14:20.587Z] [UserAction] actionFrame
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOut
+	at /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:498:35
+
+[2026-10-29T16:34:04.793Z] [ExecuteError] executeCommand
+"timeOut"
+
+[2026-10-29T16:34:04.795Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOut
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:502:31)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:440:17
+
+[2026-10-29T16:34:04.796Z] [UserAction] actionFrame
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOut
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:502:31)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:440:17
+
+[2026-10-29T16:34:16.878Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 5000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T16:34:25.577Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 5000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T16:34:45.326Z] [ExecuteError] executeCommand
+"timeOut"
+
+[2026-10-29T16:34:45.327Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOut
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:502:31)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:440:17
+
+[2026-10-29T16:34:45.328Z] [UserAction] actionFrame
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOut
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:502:31)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:440:17
+
+[2026-10-29T16:38:00.945Z] [ExecuteError] executeCommand
+"timeOut"
+
+[2026-10-29T16:38:00.947Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOut
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:503:31)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:440:17
+
+[2026-10-29T16:38:00.948Z] [UserAction] actionFrame
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOut
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:503:31)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:440:17
+
+[2026-10-29T16:38:36.454Z] [ExecuteError] executeCommand
+"timeOut"
+
+[2026-10-29T16:38:36.455Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOut
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:503:31)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:440:17
+
+[2026-10-29T16:38:36.455Z] [UserAction] actionFrame
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOut
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:503:31)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:440:17
+
+[2026-10-29T16:39:26.730Z] [ExecuteError] executeCommand
+"timeOut"
+
+[2026-10-29T16:39:26.730Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOut
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:503:31)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:440:17
+
+[2026-10-29T16:39:26.730Z] [UserAction] actionFrame
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOut
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:503:31)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:440:17
+
+[2026-10-29T16:39:30.374Z] [ExecuteError] executeCommand
+"timeOut"
+
+[2026-10-29T16:39:30.374Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOut
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:503:31)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:440:17
+
+[2026-10-29T16:39:30.374Z] [UserAction] actionFrame
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOut
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:503:31)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:440:17
+
+[2026-10-29T16:40:21.218Z] [ExecuteError] executeCommand
+"timeOut"
+
+[2026-10-29T16:40:21.218Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOut
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:503:31)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:440:17
+
+[2026-10-29T16:40:21.219Z] [UserAction] actionFrame
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOut
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:503:31)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:440:17
+
+[2026-10-29T16:46:43.857Z] [ExecuteError] executeCommand
+"timeOut"
+
+[2026-10-29T16:46:43.858Z] [ExecuteError] execute
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOut
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:503:31)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:440:17
+
+[2026-10-29T16:46:43.858Z] [UserAction] actionFrame
+CustomError: In the execute function, a function linked to a command could not be executed. Error: timeOut
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:503:31)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:440:17
+
+[2026-10-29T22:06:52.873Z] [ConnectionError] openPort
+Error: Error: No such file or directory, cannot open /dev/tty.usbmodem102
+
+[2026-10-29T22:06:52.876Z] [ConnectionError] try open port
+Error: Error: No such file or directory, cannot open /dev/tty.usbmodem102
+
+[2026-10-29T22:06:52.879Z] [ConnectionError] failed to find or open a port
+CustomError: No microbit was recognised.
+	at /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:252:24
+
+[2026-10-29T22:06:52.879Z] [UserAction] actionFrame
+CustomError: No serial port could be opened.
+	at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:359:19)
+	at async MicrobitController.connectToMicrobit (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:377:26)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:164:21
+	at async actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:77:17)
+	at async ph._executeContributedCommand (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:165:49391)
+
+[2026-10-29T22:07:25.436Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 5000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T22:19:41.418Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 5000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T22:20:12.603Z] [ExecuteError] execute
+Error: Antwort-Timeout nach 5000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T22:20:12.605Z] [UserAction] actionFrame
+CustomError: Antwort-Timeout nach 5000 ms.
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:555:49)
+	at async MicrobitController.deleteAllFiles (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:641:9)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:228:21
+	at async actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:77:17)
+	at async ph._executeContributedCommand (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:165:49391)
+
+[2026-10-29T22:32:07.930Z] [ConnectionError] failed to find or open a port
+CustomError: No microbit was recognised.
+	at /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:252:24
+
+[2026-10-29T22:32:07.931Z] [UserAction] actionFrame
+CustomError: No serial port could be opened.
+	at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:359:19)
+	at async MicrobitController.connectToMicrobit (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:377:26)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:134:34
+	at async actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:77:17)
+	at async ph._executeContributedCommand (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:165:49391)
+
+[2026-10-29T22:32:28.268Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 5000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T22:59:18.023Z] [ExecuteError] execute
+"timeOut"
+
+[2026-10-29T22:59:18.025Z] [UserAction] actionFrame
+CustomError: timeOut
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:556:49)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:444:17
+
+[2026-10-29T22:59:37.254Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 5000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T22:59:43.171Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 5000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T22:59:48.621Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 5000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T23:00:31.581Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 5000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T23:01:02.134Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 5000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T23:01:33.440Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 5000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T23:01:53.722Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 5000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T23:04:32.449Z] [ExecuteError] execute
+"timeOut"
+
+[2026-10-29T23:04:32.453Z] [UserAction] actionFrame
+CustomError: timeOut
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:555:49)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:444:17
+
+[2026-10-29T23:06:01.914Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 5000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T23:10:06.942Z] [ExecuteError] execute
+"timeOut"
+
+[2026-10-29T23:10:06.944Z] [UserAction] actionFrame
+CustomError: timeOut
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:555:49)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:444:17
+
+[2026-10-29T23:17:05.544Z] [ExecuteError] execute
+"timeOut_mem_free"
+
+[2026-10-29T23:17:05.547Z] [UserAction] actionFrame
+CustomError: timeOut_mem_free
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:555:49)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:444:17
+
+[2026-10-29T23:17:41.368Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 5000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T23:18:04.104Z] [ExecuteError] execute
+Error: Antwort-Timeout nach 5000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T23:18:04.106Z] [UserAction] actionFrame
+CustomError: Antwort-Timeout nach 5000 ms.
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:555:49)
+	at async MicrobitController.deleteAllFiles (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:641:9)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:228:21
+	at async actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:77:17)
+	at async ph._executeContributedCommand (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:165:49391)
+
+[2026-10-29T23:19:09.881Z] [UserAction] actionFrame
+Error: Antwort-Timeout nach 5000 ms.
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T23:23:56.288Z] [ExecuteError] execute
+"timeout: 0"
+
+[2026-10-29T23:23:56.291Z] [UserAction] actionFrame
+CustomError: timeout: 0
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:555:49)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:444:17
+
+[2026-10-29T23:27:32.007Z] [UserAction] actionFrame
+Error: >>> 
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T23:29:23.059Z] [ExecuteError] execute
+"timeOut_mem_free"
+
+[2026-10-29T23:29:23.062Z] [UserAction] actionFrame
+CustomError: timeOut_mem_free
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:555:49)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:444:17
+
+[2026-10-29T23:29:46.980Z] [UserAction] actionFrame
+Error: >>>
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T23:30:06.379Z] [UserAction] actionFrame
+Error: >>>
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T23:30:15.563Z] [UserAction] actionFrame
+Error: >>>
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T23:30:24.535Z] [UserAction] actionFrame
+Error: >>>
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T23:30:45.545Z] [UserAction] actionFrame
+Error: >>>
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T23:30:55.194Z] [UserAction] actionFrame
+Error: >>>
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T23:31:17.576Z] [UserAction] actionFrame
+Error: >>>
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T23:32:32.516Z] [ExecuteError] execute
+Error: >>>
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T23:32:32.520Z] [UserAction] actionFrame
+CustomError: >>>
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:555:49)
+	at async MicrobitController.deleteAllFiles (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:641:9)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:228:21
+	at async actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:77:17)
+	at async ph._executeContributedCommand (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:165:49391)
+
+[2026-10-29T23:32:37.900Z] [ExecuteError] execute
+Error: >>>
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T23:32:37.902Z] [UserAction] actionFrame
+CustomError: >>>
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:555:49)
+	at async MicrobitController.deleteAllFiles (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:641:9)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:228:21
+	at async actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:77:17)
+	at async ph._executeContributedCommand (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:165:49391)
+
+[2026-10-29T23:32:59.152Z] [ExecuteError] execute
+"timeOut_mem_free"
+
+[2026-10-29T23:32:59.153Z] [UserAction] actionFrame
+CustomError: timeOut_mem_free
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:555:49)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:444:17
+
+[2026-10-29T23:33:24.697Z] [ExecuteError] execute
+Error: >>>
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-29T23:33:24.697Z] [UserAction] actionFrame
+CustomError: >>>
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:555:49)
+	at async MicrobitController.deleteAllFiles (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:641:9)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:228:21
+	at async actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:77:17)
+	at async ph._executeContributedCommand (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:165:49391)
+
+[2026-10-29T23:33:59.372Z] [ExecuteError] execute
+"timeout: 0"
+
+[2026-10-29T23:33:59.374Z] [UserAction] actionFrame
+CustomError: timeout: 0
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:555:49)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:444:17
+
+[2026-10-29T23:34:53.897Z] [ExecuteError] execute
+"timeout: 0"
+
+[2026-10-29T23:34:53.900Z] [UserAction] actionFrame
+CustomError: timeout: 0
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:555:49)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:444:17
+
+[2026-10-29T23:36:27.088Z] [ExecuteError] execute
+"timeout: 0"
+
+[2026-10-29T23:36:27.091Z] [UserAction] actionFrame
+CustomError: timeout: 0
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:555:49)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:444:17
+
+[2026-10-29T23:43:52.064Z] [ExecuteError] execute
+"timeout: 0"
+
+[2026-10-29T23:43:52.066Z] [UserAction] actionFrame
+CustomError: timeout: 0
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:557:49)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:446:17
+
+[2026-10-29T23:46:17.164Z] [ExecuteError] execute
+"timeout: 0"
+
+[2026-10-29T23:46:17.168Z] [UserAction] actionFrame
+CustomError: timeout: 0
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:557:49)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:446:17
+
+[2026-10-29T23:57:56.655Z] [ExecuteError] execute
+"timeout: 0"
+
+[2026-10-29T23:57:56.657Z] [UserAction] actionFrame
+CustomError: timeout: 0
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:557:49)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:446:17
+
+[2026-10-29T23:58:01.469Z] [ExecuteError] execute
+"timeout: 0"
+
+[2026-10-29T23:58:01.470Z] [UserAction] actionFrame
+CustomError: timeout: 0
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:557:49)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:446:17
+
+[2026-10-29T23:58:03.207Z] [ExecuteError] execute
+"timeout: 0"
+
+[2026-10-29T23:58:03.208Z] [UserAction] actionFrame
+CustomError: timeout: 0
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:557:49)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:446:17
+
+[2026-10-29T23:58:42.208Z] [ExecuteError] execute
+"timeout: 0"
+
+[2026-10-29T23:58:42.209Z] [UserAction] actionFrame
+CustomError: timeout: 0
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:557:49)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:446:17
+
+[2026-10-30T00:05:04.055Z] [ExecuteError] execute
+"timeout: 0"
+
+[2026-10-30T00:05:04.057Z] [UserAction] actionFrame
+CustomError: timeout: 0
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:557:49)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:446:17
+
+[2026-10-30T00:06:31.157Z] [ExecuteError] execute
+"timeout: 0"
+
+[2026-10-30T00:06:31.160Z] [UserAction] actionFrame
+CustomError: timeout: 0
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:557:49)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:446:17
+
+[2026-10-30T00:06:59.303Z] [ExecuteError] execute
+"timeout: 0"
+
+[2026-10-30T00:06:59.303Z] [UserAction] actionFrame
+CustomError: timeout: 0
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:557:49)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:446:17
+
+[2026-10-30T00:07:51.792Z] [ExecuteError] execute
+Error: >>>
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-30T00:07:51.795Z] [UserAction] actionFrame
+CustomError: >>>
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:557:49)
+	at async MicrobitController.deleteAllFiles (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:643:9)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:228:21
+	at async actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:77:17)
+	at async ph._executeContributedCommand (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:165:49391)
+
+[2026-10-30T00:10:04.365Z] [ExecuteError] execute
+"timeout: 0"
+
+[2026-10-30T00:10:04.368Z] [UserAction] actionFrame
+CustomError: timeout: 0
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:557:49)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:446:17
+
+[2026-10-30T10:54:24.596Z] [ConnectionError] openPort
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2026-10-30T10:54:24.597Z] [ConnectionError] failed to find or open a port
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2026-10-30T10:54:24.597Z] [UserAction] actionFrame
+CustomError: No serial port could be opened.
+	at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:359:19)
+	at async MicrobitController.connectToMicrobit (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:377:26)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:134:34
+	at async actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:77:17)
+	at async Sh._executeContributedCommand (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:165:49397)
+
+[2026-10-30T10:54:29.256Z] [ConnectionError] openPort
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2026-10-30T10:54:29.257Z] [ConnectionError] try open port
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2026-10-30T10:54:29.265Z] [ConnectionError] openPort
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2026-10-30T10:54:29.265Z] [ConnectionError] failed to find or open a port
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2026-10-30T10:54:29.266Z] [UserAction] actionFrame
+CustomError: No serial port could be opened.
+	at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:359:19)
+	at async MicrobitController.connectToMicrobit (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:377:26)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:134:34
+	at async actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:77:17)
+	at async Sh._executeContributedCommand (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:165:49397)
+
+[2026-10-30T10:54:58.066Z] [ConnectionError] openPort
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2026-10-30T10:54:58.068Z] [ConnectionError] try open port
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2026-10-30T10:54:58.074Z] [ConnectionError] openPort
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2026-10-30T10:54:58.075Z] [ConnectionError] failed to find or open a port
+Error: Error Resource temporarily unavailable Cannot lock port
+
+[2026-10-30T10:54:58.075Z] [UserAction] actionFrame
+CustomError: No serial port could be opened.
+	at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:359:19)
+	at async MicrobitController.connectToMicrobit (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:377:26)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:134:34
+	at async actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:77:17)
+	at async Sh._executeContributedCommand (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:165:49397)
+
+[2026-10-30T10:55:47.723Z] [ExecuteError] execute
+"timeout: 0"
+
+[2026-10-30T10:55:47.726Z] [UserAction] actionFrame
+CustomError: timeout: 0
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:564:49)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:453:17
+
+[2026-10-30T11:07:15.248Z] [UserAction] actionFrame
+CustomError: No micro:bit was found.
+	at /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:794:36
+	at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+[2026-10-30T11:11:40.605Z] [ExecuteError] execute
+Error: >>>
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-30T11:11:40.608Z] [UserAction] actionFrame
+CustomError: >>>
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:560:49)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:215:25
+	at async actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:77:17)
+	at async Sh._executeContributedCommand (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:165:49397)
+
+[2026-10-30T11:12:13.482Z] [ExecuteError] execute
+Error: >>>
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-30T11:12:13.484Z] [UserAction] actionFrame
+CustomError: >>>
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:560:49)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:215:25
+	at async actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:77:17)
+	at async Sh._executeContributedCommand (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:165:49397)
+
+[2026-10-30T11:12:40.298Z] [ExecuteError] execute
+Error: >>>
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-30T11:12:40.299Z] [UserAction] actionFrame
+CustomError: >>>
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:560:49)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:215:25
+	at async actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:77:17)
+	at async Sh._executeContributedCommand (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:165:49397)
+
+[2026-10-30T11:13:07.033Z] [UserAction] actionFrame
+Error: >>>
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-30T11:13:17.098Z] [UserAction] actionFrame
+Error: >>>
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-30T11:13:28.961Z] [UserAction] actionFrame
+Error: >>>
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-30T11:13:37.663Z] [ExecuteError] execute
+"timeout: 0"
+
+[2026-10-30T11:13:37.664Z] [UserAction] actionFrame
+CustomError: timeout: 0
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:560:49)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:449:17
+
+[2026-10-30T11:14:13.858Z] [UserAction] actionFrame
+Error: >>>
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-30T11:14:24.653Z] [ExecuteError] execute
+"timeout: 0"
+
+[2026-10-30T11:14:24.654Z] [UserAction] actionFrame
+CustomError: timeout: 0
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:560:49)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:449:17
+
+[2026-10-30T11:14:39.690Z] [ExecuteError] execute
+"timeout: 0"
+
+[2026-10-30T11:14:39.691Z] [UserAction] actionFrame
+CustomError: timeout: 0
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:560:49)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:449:17
+
+[2026-10-30T11:18:01.616Z] [ExecuteError] execute
+"timeout: 0"
+
+[2026-10-30T11:18:01.618Z] [UserAction] actionFrame
+CustomError: timeout: 0
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:560:49)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:449:17
+
+[2026-10-30T11:19:51.063Z] [ExecuteError] execute
+"timeout: gc.collect()"
+
+[2026-10-30T11:19:51.066Z] [UserAction] actionFrame
+CustomError: timeout: gc.collect()
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:560:49)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:449:17
+
+[2026-10-30T11:47:56.190Z] [ExecuteError] execute
+"timeout: open"
+
+[2026-10-30T11:47:56.191Z] [UserAction] actionFrame
+CustomError: timeout: open
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:560:49)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:449:17
+
+[2026-10-30T11:48:53.400Z] [UserAction] actionFrame
+Error: >>>
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-30T11:49:27.120Z] [UserAction] actionFrame
+Error: >>>
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-30T11:49:58.561Z] [ExecuteError] execute
+"timeout: open"
+
+[2026-10-30T11:49:58.563Z] [UserAction] actionFrame
+CustomError: timeout: open
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:560:49)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:449:17
+
+[2026-10-30T11:50:36.181Z] [ExecuteError] execute
+"timeout: open"
+
+[2026-10-30T11:50:36.181Z] [UserAction] actionFrame
+CustomError: timeout: open
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:560:49)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:449:17
+
+[2026-10-30T12:02:30.807Z] [ExecuteError] execute
+Error: >>>
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-30T12:02:30.814Z] [UserAction] actionFrame
+CustomError: >>>
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:560:49)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:215:25
+	at async actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:77:17)
+	at async Sh._executeContributedCommand (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:165:49397)
+
+[2026-10-30T12:02:51.441Z] [ExecuteError] execute
+Error: >>>
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-30T12:02:51.444Z] [UserAction] actionFrame
+CustomError: >>>
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:560:49)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:215:25
+	at async actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:77:17)
+	at async Sh._executeContributedCommand (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:165:49397)
+
+[2026-10-30T12:03:33.151Z] [UserAction] actionFrame
+Error: >>>
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-30T12:03:51.788Z] [ExecuteError] execute
+Error: >>>
+	at Timeout.<anonymous> (/Users/davideichenberger/Documents/GitHub/maqueen/out/util/SerialResponses.js:32:27)
+	at listOnTimeout (node:internal/timers:685:17)
+	at process.processTimers (node:internal/timers:618:7)
+
+[2026-10-30T12:03:51.789Z] [UserAction] actionFrame
+CustomError: >>>
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:560:49)
+	at async MicrobitController.deleteAllFiles (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:646:9)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:228:21
+	at async actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:77:17)
+	at async Sh._executeContributedCommand (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:165:49397)
+
+[2026-10-30T12:04:02.488Z] [ExecuteError] execute
+"timeout: open"
+
+[2026-10-30T12:04:02.489Z] [UserAction] actionFrame
+CustomError: timeout: open
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:560:49)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:449:17
+
+[2026-10-30T12:04:12.616Z] [ExecuteError] execute
+"timeout: open"
+
+[2026-10-30T12:04:12.617Z] [UserAction] actionFrame
+CustomError: timeout: open
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:560:49)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:449:17
+
+[2026-10-30T12:04:33.561Z] [ExecuteError] execute
+"timeout: write-"
+
+[2026-10-30T12:04:33.564Z] [UserAction] actionFrame
+CustomError: timeout: write-
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:560:49)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:449:17
+
+[2026-10-30T12:07:32.275Z] [ExecuteError] execute
+"timeout: open"
+
+[2026-10-30T12:07:32.276Z] [UserAction] actionFrame
+CustomError: timeout: open
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:560:49)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:449:17
+
+[2026-10-30T12:08:26.679Z] [ExecuteError] execute
+"timeout: write-"
+
+[2026-10-30T12:08:26.681Z] [UserAction] actionFrame
+CustomError: timeout: write-
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:560:49)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:449:17
+
+[2026-10-30T12:09:39.930Z] [ExecuteError] execute
+"timeout: write-"
+
+[2026-10-30T12:09:39.931Z] [UserAction] actionFrame
+CustomError: timeout: write-
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.execute (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:560:49)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:449:17
+
+[2026-10-30T13:16:57.760Z] [ConnectionError] openPort
+Error: Error: No such file or directory, cannot open /dev/tty.usbmodem11102
+
+[2026-10-30T13:16:57.762Z] [ConnectionError] try open port
+Error: Error: No such file or directory, cannot open /dev/tty.usbmodem11102
+
+[2026-10-30T13:20:23.217Z] [ConnectionError] failed to find or open a port
+CustomError: No microbit was recognised.
+	at /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:253:24
+
+[2026-10-30T13:20:23.217Z] [UserAction] actionFrame
+CustomError: No serial port could be opened.
+	at MicrobitController.open (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:360:19)
+	at async MicrobitController.connectToMicrobit (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:378:26)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:164:21
+	at async actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:77:17)
+	at async Sh._executeContributedCommand (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:165:49397)
+
+[2026-10-30T13:49:28.658Z] [UserAction] actionFrame
+CustomError: Raw-Paste-Timeout.
+	at MicrobitController.fileUpload (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:754:19)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:146:21
+	at async actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:78:17)
+	at async Sh._executeContributedCommand (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:165:49397)
+
+[2026-10-30T13:50:20.654Z] [UserAction] actionFrame
+CustomError: Raw-Paste-Timeout.
+	at MicrobitController.fileUpload (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:754:19)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:146:21
+	at async actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:78:17)
+	at async Sh._executeContributedCommand (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:165:49397)
+
+[2026-10-30T13:52:33.961Z] [UserAction] actionFrame
+CustomError: Raw-Paste-Timeout.
+	at MicrobitController.fileUpload (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:754:19)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:146:21
+	at async actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:78:17)
+	at async Sh._executeContributedCommand (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:165:49397)
+
+[2026-10-30T13:54:13.241Z] [UserAction] actionFrame
+CustomError: Raw-Paste-Timeout.
+	at MicrobitController.fileUpload (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:757:19)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:146:21
+	at async actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:78:17)
+	at async Sh._executeContributedCommand (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:165:49397)
+
+[2026-10-30T13:54:49.387Z] [UserAction] actionFrame
+CustomError: Raw-Paste-Timeout.
+	at MicrobitController.fileUpload (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:757:19)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:146:21
+	at async actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:78:17)
+	at async Sh._executeContributedCommand (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:165:49397)
+
+[2026-11-02T14:51:31.486Z] [UserAction] actionFrame
+CustomError: Raw-Paste-Timeout.
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.put (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:445:48)
+	at async MicrobitController.fileUpload (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:766:13)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:147:21
+	at async actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:79:17)
+	at async Sh._executeContributedCommand (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:165:49397)
+
+[2026-11-02T14:51:58.026Z] [UserAction] actionFrame
+CustomError: Raw-Paste-Timeout.
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.put (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:445:48)
+	at async MicrobitController.fileUpload (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:766:13)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:147:21
+	at async actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:79:17)
+	at async Sh._executeContributedCommand (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:165:49397)
+
+[2026-11-02T14:54:09.255Z] [UserAction] actionFrame
+CustomError: Diese Firmware unterstützt Raw-Paste nicht.
+	at forwardError (/Users/davideichenberger/Documents/GitHub/maqueen/out/exception.js:77:12)
+	at MicrobitController.put (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:447:48)
+	at async MicrobitController.fileUpload (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:768:13)
+	at async /Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:146:21
+	at async actionFrame (/Users/davideichenberger/Documents/GitHub/maqueen/out/controller/microbitController.js:78:17)
+	at async Sh._executeContributedCommand (file:///Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/workbench/api/node/extensionHostProcess.js:165:49397)
+

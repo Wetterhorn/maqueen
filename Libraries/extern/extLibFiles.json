@@ -1,21 +1,11 @@
 [
     {
-        "label": "mbrobot_plusV2.py",
-        "hash": "1c8eee87cbed814b87e355a3b87af85aecf73a76bbff2631c5aa9fca76853905",
-        "type": 1,
-        "enabled": true,
-        "props": {
-            "date": "Thu, 29 Oct 2026 15:23:32 GMT",
-            "url": "https://raw.githubusercontent.com/lernbaum/microbit/refs/heads/main/mbrobot_plusV2.py"
-        }
-    },
-    {
         "label": "robot.py",
         "hash": "28cb915b33a05d8235326157e1fa193f60518b036056cf5ebde6f1d5cfa5e518",
         "type": 1,
         "enabled": true,
         "props": {
-            "date": "Thu, 29 Oct 2026 15:23:32 GMT",
+            "date": "Mon, 02 Nov 2026 14:56:43 GMT",
             "url": "https://raw.githubusercontent.com/lernbaum/microbit/refs/heads/main/robot.py"
         }
     }

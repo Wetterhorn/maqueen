@@ -4,11 +4,10 @@ import { FileProvider } from "./fileProvider";
 import { l10n } from 'vscode';
 import * as PATH from 'path';
 import { CustomError, error2user, errorType, Exception, getErrorMessage } from '../exception';
-import * as crypto from 'crypto';
-import * as https from 'https';
-import { Writable } from 'stream';
+
 import { HashedFiles, libFileTyp } from '../types';
 import { calcHash } from '../controller/workspaceController';
+import { fetchFileFromGitHub, fetchFileFromGitHubIfModified } from '../util/fetchFromGitHub';
 
 export class ExtLibFileProvider extends FileProvider<ExtLibFile> implements vscode.TreeDataProvider<ExtLibFile>, MutationListener, ActionHolder {
     private hashedFiles: HashedFiles[] = [];
@@ -491,84 +490,4 @@ async function writeJsonFile(dir: string, files: HashedFiles[]) {
     } catch (err: any) {
         throw new Exception(getErrorMessage(err), 210);
     }
-}
-
-function fetchFileFromGitHub(url: string): Promise<Uint8Array> {
-    return new Promise((resolve, reject) => {
-        let chunks: Uint8Array[] = [];
-
-        // HTTP GET-Anfrage
-        https.get(url, (response) => {
-            if (response.statusCode !== 200) {
-                reject(`Failed to get file from URL: ${url} (Status Code: ${response.statusCode})`);
-                return;
-            }
-
-            // Erstelle einen Writable-Stream, um die Antwortdaten in 'chunks' zu speichern
-            const writableStream = new Writable({
-                write(chunk, encoding, callback) {
-                    chunks.push(new Uint8Array(chunk)); // Konvertiere jeden Chunk in Uint8Array
-                    callback();
-                }
-            });
-
-            // Leite die Antwort durch den Writable-Stream
-            response.pipe(writableStream);
-
-            // Sobald der Stream beendet ist, kombiniere die Chunks und gebe sie als Uint8Array zurück
-            response.on('end', () => {
-                const fullArray = Buffer.concat(chunks.map(chunk => Buffer.from(chunk))); // Konvertiere die Chunks in einen Buffer
-                resolve(new Uint8Array(fullArray)); // Konvertiere Buffer in Uint8Array
-            });
-        }).on('error', (error) => {
-            reject(`Error fetching file: ${error.message}`);
-        });
-    });
-}
-function fetchFileFromGitHubIfModified(url: string, lastModified: string | null): Promise<{ content: Uint8Array | null, modified: boolean }> {
-    return new Promise((resolve, reject) => {
-        let chunks: Uint8Array[] = [];
-
-        const options = {
-            headers: lastModified ? { 'If-Modified-Since': lastModified } : {}
-        };
-
-        // HTTP GET-Anfrage
-        https.get(url, options, (response) => {
-            if (response.statusCode === 304) {
-                // Datei wurde nicht geändert
-                resolve({ content: null, modified: false });
-                return;
-            }
-
-            if (response.statusCode !== 200) {
-                reject(`Failed to get file from URL: ${url} (Status Code: ${response.statusCode})`);
-                return;
-            }
-
-            const lastModifiedHeader = response.headers['last-modified'];
-
-            // Erstelle einen Writable-Stream, um die Antwortdaten in 'chunks' zu speichern
-            const writableStream = new Writable({
-                write(chunk, encoding, callback) {
-                    chunks.push(new Uint8Array(chunk)); // Konvertiere jeden Chunk in Uint8Array
-                    callback();
-                }
-            });
-
-            // Leite die Antwort durch den Writable-Stream
-            response.pipe(writableStream);
-
-            // Sobald der Stream beendet ist, kombiniere die Chunks und gebe sie als Uint8Array zurück
-            response.on('end', () => {
-                const fullArray = Buffer.concat(chunks.map(chunk => Buffer.from(chunk))); // Konvertiere die Chunks in einen Buffer
-                resolve({
-                    content: new Uint8Array(fullArray), // Konvertiere Buffer in Uint8Array
-                    modified: true,
-                });
-            });
-        }).on('error', (error) => {
-            reject(`Error fetching file: ${error.message}`);
-        });
-    });
 }

@@ -3,14 +3,8 @@
   "displayName": "Micro:bit Maqueen MicroPython",
   "description": "%description%",
   "publisher": "DavidEichenberger",
-  "license": "MIT",
-  "files": [
-    "README.md",
-    "LICENSE.md",
-    "Libraries/extern/gitHub",
-    "Libraries/extern/local"
-  ],
-  "version": "0.0.23",
+  "license": "# License",
+  "version": "0.0.25",
   "icon": "resources/extensionIcon.png",
   "repository": {
     "type": "git",
@@ -242,7 +236,12 @@
       {
         "view": "welcome",
         "contents": "%viewsWelcome.welcome1%",
-        "when": "workspaceFolderCount > 0 && maqueen.workspaceIsOk=='false'"
+        "when": "workspaceFolderCount > 0 && maqueen.workspaceIsOk=='false' && !maqueen.copilotInstructionsInvalid"
+      },
+      {
+        "view": "welcome",
+        "contents": "%viewsWelcome.repairProject%",
+        "when": "workspaceFolderCount > 0 && maqueen.workspaceIsOk=='false' && maqueen.copilotInstructionsInvalid"
       },
       {
         "view": "welcome",

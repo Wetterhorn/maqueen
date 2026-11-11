@@ -6,42 +6,71 @@ import { Exception, getErrorMessage } from '../exception';
 import { ActionHolder, MutationListener } from './interfaces';
 import { l10n } from 'vscode';
 import { HashedFiles, libFileTyp } from '../types';
+import {
+    areCopilotInstructionsIntact, syncCopilotInstructions, updateCopilotInstructionsIfIntact
+} from '../util/syncCopilotInstructions';
 
 export class WorkspaceController implements ActionHolder {
     private context: vscode.ExtensionContext;
     private missingFiles: File[] = [];
     private mutationListener: { listener: MutationListener, create: boolean, del: boolean, change: boolean }[] = [];
     private extLibMutationListener: MutationListener[] = [];
+    private validationVersion = 0;
+    private creatingProject = false;
 
     constructor(context: vscode.ExtensionContext) {
         this.context = context;
-        const rootPath = (vscode.workspace.workspaceFolders && (vscode.workspace.workspaceFolders.length > 0))
-            ? vscode.workspace.workspaceFolders[0].uri.fsPath : undefined;
         vscode.commands.executeCommand('setContext', 'maqueen.workspaceIsOk', 'false');
-        if (rootPath) {
-            (async () => {
-                let ok = false;
-                await this.hashDefaultLibFiles();
-                const lib = await this.areLibFilesIntact();
-                const sourceFi = await this.checkSourceFiles(false);
-                if (await this.areLibFilesIntact() && await this.checkSourceFiles(false)) {
-                    ok = true;
-                }
-                vscode.commands.executeCommand('setContext', 'maqueen.workspaceIsOk', ok ? 'true' : 'false');
-            })();
+        vscode.commands.executeCommand('setContext', 'maqueen.copilotInstructionsInvalid', false);
+    }
+
+    /** Opening a folder never creates or repairs project files. */
+    public async initialize(): Promise<void> {
+        const root = vscode.workspace.workspaceFolders?.[0]?.uri;
+        if (!root) return;
+        try {
+            await this.hashDefaultLibFiles();
+            if (await this.areLibFilesIntact() && await this.checkSourceFiles(false)
+                && await areCopilotInstructionsIntact(root, this.context.extensionUri)) {
+                await updateCopilotInstructionsIfIntact(root, this.context.extensionUri);
+            }
+        } catch (error) {
+            // Offline checks must not disable an otherwise intact local project.
+            console.error('Micro:bit-Projekt konnte nicht auf Aktualisierungen geprüft werden:', error);
         }
+        await this.refreshWorkspaceState();
+    }
+
+    /** Read-only validation, including the instruction file's reference hash. */
+    public async refreshWorkspaceState(): Promise<void> {
+        const version = ++this.validationVersion;
+        const root = vscode.workspace.workspaceFolders?.[0]?.uri;
+        let structureIntact = false;
+        let instructionsIntact = false;
+        try {
+            if (root) {
+                structureIntact = await this.areLibFilesIntact() && await this.checkSourceFiles(false);
+                instructionsIntact = structureIntact && await areCopilotInstructionsIntact(root, this.context.extensionUri);
+            }
+        } catch (error) {
+            console.error('Micro:bit-Projekt konnte nicht überprüft werden:', error);
+        }
+        // Ignore stale results if another file change triggered a newer check.
+        if (version !== this.validationVersion) return;
+        await vscode.commands.executeCommand('setContext', 'maqueen.copilotInstructionsInvalid',
+            structureIntact && !instructionsIntact);
+        if (version !== this.validationVersion) return;
+        await vscode.commands.executeCommand('setContext', 'maqueen.workspaceIsOk',
+            structureIntact && instructionsIntact ? 'true' : 'false');
     }
 
     public async refresh(uri: vscode.Uri, mutation: string) {
         const childPath = uri.fsPath;
+        if (!vscode.workspace.workspaceFolders?.length) return;
         const root = this.getRootPath();
         if (mutation === 'delete' || mutation === 'change' || mutation === 'create') {
             if (!(childPath.startsWith(path.join(root, 'src', 'main') + path.sep))) {
-                if (!(await this.areLibFilesIntact() && await this.checkSourceFiles(false))) {
-                    vscode.commands.executeCommand('setContext', 'maqueen.workspaceIsOk', 'false');
-                } else {
-                    vscode.commands.executeCommand('setContext', 'maqueen.workspaceIsOk', 'true');
-                }
+                await this.refreshWorkspaceState();
             }
         }
         if ((mutation === 'change' || mutation === 'create')&& !childPath.startsWith(path.join(root, 'src') + path.sep)) {
@@ -89,6 +118,8 @@ export class WorkspaceController implements ActionHolder {
         switch (actionId) {
             case 'createProject':
                 return async () => {
+                    if (this.creatingProject) return;
+                    this.creatingProject = true;
                     try {
                         const files = await vscode.workspace.fs.readDirectory(vscode.Uri.file(this.getRootPath()));
                         let result: string | undefined;
@@ -104,15 +135,17 @@ export class WorkspaceController implements ActionHolder {
                         }
                         const missingFiles = await this.checkLibFiles();
                         if (missingFiles.length > 0) {
-                            this.healLibFiles();
+                            await this.healLibFiles();
                         }
                         await this.checkAndHealExtLibFiles();
                         await this.checkSourceFiles(true);
+                        await syncCopilotInstructions(
+                            vscode.workspace.workspaceFolders![0].uri, this.context.extensionUri
+                        );
                         this.refreshExtLibFileListener();
-                        vscode.commands.executeCommand('setContext', 'maqueen.workspaceIsOk', 'true');
-
-                    } catch (err: any) {
-                        throw err;
+                    } finally {
+                        this.creatingProject = false;
+                        await this.refreshWorkspaceState();
                     }
                 };
         }
@@ -257,7 +290,7 @@ export class WorkspaceController implements ActionHolder {
             for (const file of this.missingFiles) {
                 const sourcePath = path.join(extensionPath, 'Libraries', ...file.extDirs, file.name);
                 const targetPath = path.join(root, ...file.dirs, file.name);
-                vscode.workspace.fs.createDirectory(vscode.Uri.file(path.join(root, ...file.dirs)));
+                await vscode.workspace.fs.createDirectory(vscode.Uri.file(path.join(root, ...file.dirs)));
                 const r = await vscode.workspace.fs.copy(vscode.Uri.file(sourcePath), vscode.Uri.file(targetPath), { overwrite: true });
             }
         } catch (err: any) {

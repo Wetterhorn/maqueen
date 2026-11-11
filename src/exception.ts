@@ -74,6 +74,7 @@ export function getErrorMessage(err: any, includeId: boolean = false): string{
 }
 
 export async function error2user(error: VerboseError){
+    console.log(error)
     let advice = l10n.t('There is no error description for the error that has occurred.');
     if(error instanceof Exception){
         advice = l10n.t({message: 'The following error has occurred:{0}', args: [error.verboseErrorMessage], comment: ['{0} ist eine Fehlermeldung']});

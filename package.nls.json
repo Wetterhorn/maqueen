@@ -18,6 +18,7 @@
     "viewsWelcome.welcome1": "The open folder does not contain a (complete) Micro:bit project. Create a Micro:bit project in the open folder or select a different folder. \n[Create Micro:bit project](command:maqueen.createProject)\n[Open another folder](command:maqueen.openWorkspace)",
     "viewsWelcome.welcome2": "Open a folder to continue an existing Micro:bit project or create a new one.\n[open folder](command:maqueen.openWorkspace)",
     "viewsWelcome.welcome3": "Analyse Workspace...",
+    "viewsWelcome.repairProject": "The project structure is incomplete or has been changed.\n[Regenerate project structure](command:maqueen.createProject)",
     "command.enableLib": "Enable module",
     "command.disableLib": "Disable module",
     "command.deleteExtLib": "Delete from extension",

@@ -41,20 +41,30 @@ export async function activate(context: vscode.ExtensionContext) {
 	microbitController.addMutationListener(controlProvider);
 	// Dateisystemänderungen überwachen
 	const watcher = vscode.workspace.createFileSystemWatcher('**/*');
+	context.subscriptions.push(watcher);
+	const refreshWorkspace = (uri: vscode.Uri, mutation: string): void => {
+		void workspaceController.refresh(uri, mutation).catch(error => console.error(error));
+	};
 
 	// Wenn eine Datei erstellt wird, den TreeView aktualisieren
-	watcher.onDidCreate((uri) => {
-		workspaceController.refresh(uri, 'create');
-	});
+	context.subscriptions.push(watcher.onDidCreate(uri => refreshWorkspace(uri, 'create')));
 
-	watcher.onDidChange((uri) => {
-		workspaceController.refresh(uri, 'change');
-	});
+	context.subscriptions.push(watcher.onDidChange(uri => refreshWorkspace(uri, 'change')));
 
 	// Wenn eine Datei gelöscht wird, den TreeView aktualisieren
-	watcher.onDidDelete((uri) => {
-		workspaceController.refresh(uri, 'delete');
-	});
+	context.subscriptions.push(watcher.onDidDelete(uri => refreshWorkspace(uri, 'delete')));
+	const workspaceRoot = vscode.workspace.workspaceFolders?.[0]?.uri;
+	const instructionsUri = workspaceRoot
+		? vscode.Uri.joinPath(workspaceRoot, '.github', 'copilot-instructions.md').toString() : undefined;
+	const refreshInstructions = (document: vscode.TextDocument): void => {
+		if (document.uri.toString() === instructionsUri) refreshWorkspace(document.uri, 'change');
+	};
+	// Include unsaved edits and undo/close, not just filesystem save events.
+	context.subscriptions.push(
+		vscode.workspace.onDidChangeTextDocument(event => refreshInstructions(event.document)),
+		vscode.workspace.onDidSaveTextDocument(refreshInstructions),
+		vscode.workspace.onDidCloseTextDocument(refreshInstructions)
+	);
 
 	vscode.window.onDidChangeActiveTextEditor(editor => {
 		if (editor) {
@@ -96,6 +106,7 @@ export async function activate(context: vscode.ExtensionContext) {
 	registerWorkspaceCommands({ context: context, controller: workspaceController });
 	registerMicrobitCommands({ context: context, controller: microbitController });
 	registerExtLibFileCommands({ context: context, controller: extLibFileProvider });
+	await workspaceController.initialize();
 	await extLibFileProvider.updateGitHubFiles();
 	console.log("Extension is active");
 	vscode.commands.executeCommand('setContext', 'maqueen.extensionActivated', true);
